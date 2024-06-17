@@ -93,6 +93,9 @@ function output(courses) {
         courseDiv.appendChild(courseTitle);
         boxCourse.appendChild(courseDiv);
     });
+
+    const totalCredits = courses.reduce((sum, course) => sum + course.credits, 0);
+    document.getElementById('totalCredits').textContent = `Total Credits: ${totalCredits}`;
 }
 
 output(courses);

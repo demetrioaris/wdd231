@@ -197,6 +197,11 @@ button {
     width: auto;
 }
 
+.certificate p {
+    margin: 10px;
+    font-weight: bold;
+}
+
 
 
 
