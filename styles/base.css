@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+:root {
+    /* Color Palette */
+    --primary-color: #344E41;
+    --secondary-color: #3A5A40;
+    --accent1-color: #588157;
+    --accent2-color: #A3B18A;
+    --accent3-color: #DAD7CD;
+
+    /* Fonts */
+    --heading-font: 'Poppins', sans-serif;
+    --paragraph-font: 'Poppins', sans-serif;
+
+    /* Text Colors */
+    --headline-color-on-white: var(--secondary-color); /* Headlines on a white background */ 
+    --headline-color-on-color: var(--accent3-color); /* Headlines on a colored background */ 
+    --paragraph-color-on-white: var(--secondary-color); /* Paragraph text on a white background */ 
+    --paragraph-color-on-color: var(--accent3-color); /* Paragraph text on a colored background */
+    --paragraph-background-color: var(--secondary-color); 
+
+    /* Navigation Colors */
+    --nav-link-color: var(--accent3-color);
+    --nav-background-color: var(--primary-color); 
+    --nav-hover-link-color: var(--secondary-color);
+    --nav-hover-background-color: var(--accent3-color); 
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-white);
+    margin: 0;
+    padding: 0;
+}
+
+/* Small-screen */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent3-color);
+}
+
+.photo-perfil {
+    border-radius: 5px;
+    margin: 5px;
+    width: 50px;
+    height: 85px;
+}
+.nameHeader {
+    font-size: 1.5rem;
+}
+
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background-color: var(--nav-background-color);
+    color: var(--accent1-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--nav-link-color);
+}
+
+.navigation a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+    font-weight: 700;
+}
+
+.open a {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.active::before {
+    content: "🔗";
+    padding-right: 0.5rem;
+
+}
+
+main {
+    margin: 10px;
+    display: grid;
+    gap: 0.5em;
+    grid-template-rows: auto auto auto;
+}
+
+.card-01 {
+    grid-row: 1;
+    background-color: var(--accent3-color);
+    color: var(--headline-color-on-color);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.card-01 ul {
+    color: var(--headline-color-on-white);
+    text-align: left;
+}
+
+.card-02 {
+    grid-row: 2;
+    background-color: var(--accent3-color);
+    color: var(--headline-color-on-color);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.certificate {
+    grid-row: 3;
+    border-radius: 5px;
+    background-color: var(--accent3-color);
+    color: var(--headline-color-on-color);
+    text-align: center;
+}
+
+.titleCard {
+    background-color: var(--paragraph-background-color);
+    grid-row: 1;
+    color: var(--headline-color-on-color);
+    
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+button {
+    outline: none;
+    background-color: var(--nav-background-color);
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-color);
+    padding: 5px 20px;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.course {
+    background-color: var(--accent2-color);
+    width: 150px;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.course {
+    display: none;
+    width: auto;
+}
+
+
+/* Large-screen horizontal layout */
+@media (min-width: 37.5em) {
+    
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto auto 1fr;
+        grid-template-rows: auto auto;
+        gap: 0 0.5em;
+    }
+
+    .photo-perfil {
+        grid-row: 1;
+        grid-column: 2 / 3;
+        justify-self: left;
+        margin: 10px auto;
+        width: 71px;
+        height: 121px;
+        border-radius: 5px;
+    }
+
+    header h1 {
+        grid-row: 1;
+        grid-column: 3 / 4;
+        font-size: 2.5rem;
+        margin: auto 0;
+    }
+
+    #menu {
+        display: none; /* Hide hamburger button */
+    }
+
+    .navigation {
+        flex-direction: row;
+        max-width: 100%;
+        grid-row: 2;
+        grid-column: 1 / 5;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    /* Main content */
+    main {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 0.5em;
+        margin: 10px 20px;
+    }
+
+    .card-01 {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        background-color: var(--accent3-color);
+        color: var(--headline-color-on-color);
+        text-align: center;
+        border-radius: 5px;
+    }
+
+
+
+    .card-02 {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        background-color: var(--accent3-color);
+        color: var(--headline-color-on-color);
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    .card-02 div {
+        margin: 5px;
+    }    
+
+    .card-02 img {
+        width: 90%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .card-02 p {
+        text-align: center;
+        margin: 5px 5px 10px 5px;
+    }
+
+    .certificate {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        border-radius: 5px;
+        background-color: var(--accent3-color);
+        color: var(--headline-color-on-color);
+        text-align: center;
+    }
+
+    .certificate {
+        display: grid;
+        grid-template-rows: auto auto auto;
+    }
+
+    .boxButton {
+        grid-row: 2;
+        margin: 10px;
+    }
+
+
+    button:hover {
+        background-color: var(--secondary-color);
+        color: var(--headline-color-on-color);
+        
+    }
+
+    .boxCourse {
+        grid-row: 3;
+        padding: 1rem;;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 
+        repeat(auto-fill, minmax(
+            min(10rem, 100%), 1fr));
+    }
+
+    .showCourse {
+        display: block;
+    }
+}
+
+
+footer {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
+    text-align: center;
+}
+
+footer p{
+    color: var(--paragraph-color-on-color)
+};
