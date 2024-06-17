@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.querySelector('.photo-perfil').src = 'images/demetrio_photo-171px.png';
+
 
 const courses = [
     {
