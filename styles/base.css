@@ -23,7 +23,7 @@
     --nav-link-color: var(--accent3-color);
     --nav-background-color: var(--primary-color); 
     --nav-hover-link-color: var(--secondary-color);
-    --nav-hover-background-color: var(--accent3-color); 
+    --nav-hover-background-color: var(--accent2-color); 
 }
 
 h1, h2 {
