@@ -171,19 +171,33 @@ button {
     cursor: pointer;
 }
 
-.course {
-    background-color: var(--accent2-color);
+.courseNoComplete {
+    background-color: var(--accent3-color);
+    border: var(--primary-color) solid 2px;
     width: 150px;
     line-height: 30px;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-}
 
-.course {
     display: none;
     width: auto;
 }
+
+.courseComplete {
+    background-color: var(--accent2-color);
+    border: var(--primary-color) solid 2px;
+
+    width: 150px;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: none;
+    width: auto;
+}
+
+
 
 
 /* Large-screen horizontal layout */

@@ -78,6 +78,13 @@ function output(courses) {
     courses.forEach((course) => {
         let courseDiv = document.createElement('div');
         courseDiv.classList.add('course');
+        
+        if (course.completed) {
+            courseDiv.classList.add('courseComplete');
+        } else {
+            courseDiv.classList.add('courseNoComplete');
+        }
+        courseDiv.id = 'course';
         courseDiv.setAttribute('data-subject', course.subject);
         
         let courseTitle = document.createElement('h2');
@@ -97,12 +104,12 @@ boxButtons.forEach(button => {
     button.addEventListener("click", function () {
         const selectButton = this.value.toUpperCase(); // Convert to uppercase to match 'data-subject' values
         if (selectButton === "ALL") {
-            boxCourse.querySelectorAll(".course").forEach(function (course) {
+            boxCourse.querySelectorAll("#course").forEach(function (course) {
                 course.style.display = "block";
             });
             return;
         }
-        boxCourse.querySelectorAll(".course").forEach(function (course) {
+        boxCourse.querySelectorAll("#course").forEach(function (course) {
             course.style.display = "none";
         });
         boxCourse.querySelectorAll(`.course[data-subject="${selectButton}"]`).forEach(function (course) {
@@ -111,8 +118,12 @@ boxButtons.forEach(button => {
     });
 });
 
+
+
 const allButton = document.querySelector('.boxButton button[value="all"]');
 allButton.click();
+
+
 
 // Footer information
 const currentYear = new Date().getFullYear();
