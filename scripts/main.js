@@ -106,7 +106,7 @@ const boxButtons = document.querySelectorAll('.boxButton button');
 
 boxButtons.forEach(button => {
     button.addEventListener("click", function () {
-        const selectButton = this.value.toUpperCase(); // Convert to uppercase to match 'data-subject' values
+        const selectButton = this.value.toUpperCase(); 
         if (selectButton === "ALL") {
             boxCourse.querySelectorAll("#course").forEach(function (course) {
                 course.style.display = "block";
