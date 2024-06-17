@@ -96,6 +96,7 @@ function output(courses) {
 
     const totalCredits = courses.reduce((sum, course) => sum + course.credits, 0);
     document.getElementById('totalCredits').textContent = `Total Credits: ${totalCredits}`;
+    //make chages
 }
 
 output(courses);
