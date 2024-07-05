@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directory | ChamberPanama
+    </title>
+    <meta name="description" content="Chamber directory, Panama" />
+    <meta name="author" content="Demetrio Aris" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/directory-large.css" />
+    <script src="scripts/directory.js" defer></script>
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js"></script>
+    <link rel="icon" href="images/favicon-main-modified.ico" sizes="48x48" type="image/ico">
+</head>
+
+<body>
+    <header>
+        <img class="logo-chamber" src="images/logo-chamber-modified-small.webp" alt="Logo Chamber Panama" />
+        <h1 class="nameHeader">Panama Chamber</h1>
+        <button id="menu"></button>
+        <nav class="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="html/chamber">Discover</a>
+            <a href="">Directory</a>
+            <a href="">Join</a>
+        </nav>
+    </header>
+    <main>
+        <h2 class="subtitle">Directory</h2>
+        <div class="button-box"><button class="mybtn fa-solid fa-list" onclick="buttonView(0); list()">
+                <span>List</span></button>
+            <button class="mybtn activebtn fa-solid fa-th-large" onclick="buttonView(1); grid()">
+                <span>Grid</span></button>
+        </div>
+
+        <div id="directory-box"></div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear">Lorem</span> Demetrio Aris |
+            Panama</p>
+        <p id="lastModified">Lorem ipsum</p>
+    </footer>
+</body>
+
+</html>
