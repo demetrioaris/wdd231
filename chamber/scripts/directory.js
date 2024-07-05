@@ -12,29 +12,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-var myBtn = document.getElementsByClassName("mybtn");
-var index = 0;
+// Obtener todos los botones con la clase "mybtn"
+const myBtns = document.getElementsByClassName("mybtn");
+let index = 0;
 
+// Función para manejar la visualización del botón activo
 function buttonView(n) {
     currentShowButton(index = n);
 }
 
+// Función para establecer el botón activo
 function currentShowButton(n) {
-    for (var i = 0; i < myBtn.length; i++) {
-        myBtn[i].className = myBtn[i].className.replace(" activebtn", "")
+    for (let i = 0; i < myBtns.length; i++) {
+        myBtns[i].className = myBtns[i].className.replace(" activebtn", "");
     }
-    myBtn[n].className += " activebtn";
+    myBtns[n].className += " activebtn";
 }
 
+// Función para mostrar el directorio en formato lista
 function list() {
-    var boxDirectory = document.getElementById("directory-box");
-    boxDirectory.style.display = "block"
+    const boxDirectory = document.getElementById("directory-box");
+    boxDirectory.style.display = "block";
+    boxDirectory.style.gridTemplateColumns = ""; // Reset grid columns if previously set
 }
 
+// Función para mostrar el directorio en formato cuadrícula
 function grid() {
-    var boxDirectory = document.getElementById("directory-box");
-    boxDirectory.style.display = "grid"
+    const boxDirectory = document.getElementById("directory-box");
+    boxDirectory.style.display = "grid";
+    boxDirectory.style.gridTemplateColumns = "repeat(auto-fill, minmax(200px, 1fr))"; // Adjust column size as needed
 }
+
+// Añadir event listeners a los botones (si los botones son elementos interactivos)
+for (let i = 0; i < myBtns.length; i++) {
+    myBtns[i].addEventListener('click', function() {
+        buttonView(i);
+    });
+}
+
 
 
 document.addEventListener("DOMContentLoaded", async () => {

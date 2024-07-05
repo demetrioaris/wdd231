@@ -4,7 +4,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 1.5rem;
     }
 
     #toggleView {
@@ -34,7 +33,6 @@
 
     .navigation a {
         display: block;
-        font-size: 1.5rem;
         padding: 1rem;
         flex: 1 1 100%;
     }
