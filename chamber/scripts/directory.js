@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamButton = document.querySelector('#menu');
     const navigation = document.querySelector('.navigation');
-    const nameHeader = document.querySelector('.nameHeader'); // Select the h1 element
-    const logoChamber = document.querySelector('.logo-chamber'); // Select the h1 element
+    //const nameHeader = document.querySelector('.nameHeader'); // Select the h1 element
+    //const logoChamber = document.querySelector('.logo-chamber'); // Select the h1 element
 
     hamButton.addEventListener('click', () => {
         navigation.classList.toggle('open');
         hamButton.classList.toggle('open');
-        nameHeader.classList.toggle('hidden');
-        logoChamber.classList.toggle('hidden');
+        //nameHeader.classList.toggle('hidden');
+        //logoChamber.classList.toggle('hidden');
     });
 });
 
