@@ -117,9 +117,8 @@ header h1 {
     padding: 20px;
 }
 
-main .button-box {
+.button-box {
     text-align: center;
-    align-content: center;
 }
 
 .mybtn {
@@ -148,20 +147,20 @@ main .button-box {
 
 #directory-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 10px;
-    margin: 0 10px;
+}
+
+#directory-box {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    margin: 30px 10px;
 }
 
 .card-box {
+    padding: 20px;
     border: 1px solid #ddd;
-    padding: 16px;
-    margin: 25px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    align-content: center;
-
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--eerie-black);
+    margin: 5px;
 }
 
 .card-box span {
@@ -169,7 +168,6 @@ main .button-box {
 }
 
 .card-box img {
-    padding: 10px 0;
     max-width: 30%;
     height: auto;
     border-radius: 8px;
@@ -183,10 +181,10 @@ main .button-box {
 
 .card-box p {
     color: var(--onyx);
-    width: 100%;
     font-size: 14px;
     padding: 10px 0;
 }
+
 
 footer {
     padding: 20px;
