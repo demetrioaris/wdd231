@@ -121,6 +121,10 @@ header h1 {
     text-align: center;
 }
 
+button p {
+    display: inline;
+}
+
 .mybtn {
     padding: 10px 20px;
     text-transform: uppercase;
