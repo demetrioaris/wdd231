@@ -1,15 +1,10 @@
 /* Larger Views ******************************/
 @media (min-width: 750px) {
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+
 
     .navigation {
         justify-content: flex-end;
         flex-direction: row;
-        padding: 0 50px;
     }
 
     .navigation a {
