@@ -199,7 +199,7 @@ button p {
 
 /* Footer *********/
 footer {
-    padding: 20px;
+    padding: 10px;
     background-color: var(--gunmetal);
     color: var(--eerie-black);
     text-align: center;
@@ -208,5 +208,5 @@ footer {
 footer p {
     color: var(--alice-blue);
     font-size: 18px;
-    padding: 10px;
+    padding: 5px;
 }
