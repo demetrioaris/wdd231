@@ -1,7 +1,6 @@
 /* Larger Views ******************************/
 @media (min-width: 750px) {
-
-
+    
     .navigation {
         justify-content: flex-end;
         flex-direction: row;
