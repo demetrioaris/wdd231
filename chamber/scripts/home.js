@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         eventMainBox.innerHTML = `
                 <div class="current-weather">
-                    <h3>Weather <span id="city-name">${data.name}</span><br>${weekdays[day]}</h3>
+                    <h3>The current Weather in: <span id="city-name">${data.name}</span><br><br>${weekdays[day]}</h3>
                     <div class="weather-content"></div>
                     <p>Temperature <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}&deg;F</span></p>
                     <figure>
