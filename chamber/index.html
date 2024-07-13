@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/chamber.css" />
     <link rel="stylesheet" href="styles/chamber-large.css" />
     <script type="module" src="/chamber/scripts/app.js" defer></script>
-    <script src="./scripts/directory.js" defer></script>
+    <script src="./scripts/home.js" defer></script>
     <link rel="icon" href="images/favicon-main-modified.ico" sizes="48x48" type="image/ico">
 </head>
 
@@ -36,24 +36,42 @@
         <a href="/chamber/directory.html" class="nav-link">Directory</a>
         <a href="/chamber/join.html" class="nav-link">Join</a>
     </nav>
-    <main>
-        <h2 class="subtitle">Directory</h2>
-        <div class="button-box">
-            <button title="List view" class="mybtn fa-solid fa-list" onclick="buttonView(0); list()">
-                <p>List</p>
-            </button>
-            <button title="Grid view" class="mybtn activebtn fa-solid fa-th-large" onclick="buttonView(1); grid()">
-                <p>grid</p>
-            </button>
-        </div>
+    <main class="container-home">
+        <section class="hero-main-box">
+            <picture class="hero-box-img">
+                <source media="(min-width: 900px)" srcset="images/panama-city-4742656_1280-01.jpg">
+                <source media="(min-width: 720px)" srcset="images/panama-city-4742656_640.jpg">
+                <img class="hero-home-img" src="images/panama-city-4742656_430.jpg" alt="Panama city">
+            </picture>
 
-        <div id="directory-box"></div>
+            <div class="call-to-action">
+                <h3>Join the Panamá Chamber of Commerce today!</h3>
+                <p>Enhance your business network, access exclusive resources, and drive local economic growth.</p>
+                <p>Click here to become a member and start making a difference.</p>
+                <div class="join-us" name="join">
+                    <a href="/chamber/join.html">Join us</a>
+                </div>
+            </div>
+        </section>
+        <section class="event-main-box">
+            <article class="event-main">
+                <figure>
+                    <img src="/chamber/images/event-small-evenmore.png" loading="lazy" alt="current event" width="270px"
+                        height="300px">
+                </figure>
+            </article>
+            <article class="weather-main" id="weather-main"></article>
+            <article class="weather-forecast" id="weather-forecast"></article>
+        </section>
+        <section class="spotlights-main-box"></section>
     </main>
+
     <footer>
         <p>&copy;<span id="currentyear">Lorem</span> Demetrio Aris |
             Panama</p>
         <p id="lastModified">Lorem ipsum</p>
     </footer>
+
 </body>
 
 </html>
