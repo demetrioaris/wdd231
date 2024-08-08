@@ -1,0 +1,41 @@
+@media (min-width: 750px) {
+    header {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .navigation {
+        grid-column: 3/5;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 1rem;
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+        /* Hide hamburger button */
+    }
+
+    .about {
+        padding: 10px;
+    }
+
+    .about h2 {
+        font-size: 1.5em;
+    }
+
+    .about h3 {
+        font-size: 1.2em;
+    }
+
+    .about p {
+        font-size: 0.9em;
+    }
+}
