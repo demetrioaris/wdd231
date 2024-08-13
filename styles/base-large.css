@@ -1,7 +1,5 @@
 /* Large-screen horizontal layout */
 @media (min-width: 720px) {
-
-
     header {
         display: grid;
         grid-template-columns: 1fr auto auto 1fr;
@@ -12,8 +10,7 @@
     .photo-perfil {
         grid-row: 1;
         grid-column: 2 / 3;
-        justify-self: left;
-        margin: 10px auto;
+        margin: 15px auto;
         width: 71px;
         height: 121px;
         border-radius: 5px;
@@ -22,7 +19,7 @@
     header h1 {
         grid-row: 1;
         grid-column: 3 / 4;
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin: auto 0;
     }
 
@@ -31,14 +28,14 @@
         /* Hide hamburger button */
     }
 
-    .navigation {
+    nav {
         flex-direction: row;
         max-width: 100%;
         grid-row: 2;
         grid-column: 1 / 5;
     }
 
-    .navigation a {
+    nav a {
         display: block;
         flex: 1 1 100%;
     }
@@ -49,26 +46,26 @@
         width: 720px;
         text-align: center;
         margin: 10px auto;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: auto 1fr auto;
     }
 
     .card-01 {
         grid-column: 1 / 2;
         grid-row: 1;
-        background-color: var(--accent3-color);
-        color: var(--headline-color-on-color);
         text-align: center;
-        border-radius: 5px;
     }
 
+    .card-01 ol {
+        text-align: left;
+        font-size: 1.1rem; /***have to change it***/
+    }
 
 
     .card-02 {
         grid-column: 2 / 3;
         grid-row: 1;
-        background-color: var(--accent3-color);
-        color: var(--headline-color-on-color);
         text-align: center;
-        border-radius: 5px;
     }
 
     .card-02 div {
@@ -86,18 +83,24 @@
         margin: 5px 5px 10px 5px;
     }
 
-    .certificate01 {
+    [class^="certificate"] {
         grid-column: 1 / 3;
-        grid-row: 2;
+    }
+
+    .certificate01 {
+        grid-row: 3;
         border-radius: 5px;
         background-color: var(--accent3-color);
         color: var(--headline-color-on-color);
         text-align: center;
     }
 
-    .certificate01 {
-        display: grid;
-        grid-template-rows: ;
+    .certificate02 {
+        grid-row: 4;
+    }
+    
+    .certificate03 {
+        grid-row: 5;
     }
 
     .boxButton {
