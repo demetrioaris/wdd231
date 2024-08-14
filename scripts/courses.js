@@ -111,9 +111,68 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'This course will teach you how to design and build interactive web based applications using HTML, CSS, JavaScript, and a web development stack.',
             technology: ['Server Side'],
             completed: false
-        }
-    
+        },
         //Software Development certificate
+        {
+            subject: 'CSE',
+            number: 212,
+            title: 'Programming w/Data Struct',
+            credits: 2,
+            certificate: 'Software Development',
+            description: 'This course will introduce students to the common programming data structures with an emphasis on how to use them to solve practical, real-world problems.',
+            technology: ['.NET, C#'],
+            completed: true
+        },
+        {
+            subject: 'CSE',
+            number: 270,
+            title: 'Software Testing',
+            credits: 3,
+            certificate: 'Software Development',
+            description: 'Software Testing is a systematic process of verifying requirements and design elements, features, or standards against the implementation to increase product success. The verification process uses a set of test paths starting from the minor units up to the entire deliverable system using predetermined or live data to build confidence that the product works right (as specified). CSE 270 will explore testing standards, techniques, tools, and cases.',
+            technology: ['Software Testing'],
+            completed: false
+        },
+        {
+            subject: 'CSE',
+            number: 300,
+            title: 'Professional Readiness',
+            credits: 1,
+            certificate: 'Software Development',
+            description: 'This course will help prepare students to be professionals in their major by completing activities that will provide professional connections, confidence, and employability.',
+            technology: [''],
+            completed: false
+        },
+        {
+            subject: 'CSE',
+            number: 310,
+            title: 'Applied Programming',
+            credits: 3,
+            certificate: 'Software Development',
+            description: 'This course will teach students to work in teams on large projects using new technology on self-defined projects. The class will simulate real-word programming projects with the aim of producing workable solutions that have potential impact.',
+            technology: [''],
+            completed: false
+        },
+        {
+            subject: 'CSE',
+            number: 325,
+            title: '.NET Software Development',
+            credits: 3,
+            certificate: 'Software Development',
+            description: 'This course leverages a student`s fundamental software development and core web technology background with the Microsoft .NET framework with C# using the Visual Studio Integrated Development Environment. Students will build upon a C# foundation using the ASP.NET framework to design and develop scalable, standards-based web sites, applications, and services using contemporary methodologies and established design patterns. Team work and programming deliverables will be required.',
+            technology: [''],
+            completed: false
+        },
+        {
+            subject: 'CSE',
+            number: 370,
+            title: 'Software Eng. Principles',
+            credits: 2,
+            certificate: 'Software Development',
+            description: 'Students learn to analyze and make decisions in software projects through all phases of the software development lifecycle, including requirements elicitation, design, testing, verification, and maintenance.',
+            technology: [''],
+            completed: false
+        }
     ];
 
     function output(courses) {
