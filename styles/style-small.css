@@ -253,7 +253,7 @@ section p {
 }
 
 .courseNoComplete {
-    background-color: var(--cool-gray);
+    background-color: var( --alice-blue);
     color: var(--oxford-blue-3);
 }
 
