@@ -54,7 +54,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+a {
     font-family: var(--lato-regular-font-family);
 }
 
@@ -147,7 +148,7 @@ nav li:last-child {
 
 nav a.active {
     background-color: var(--cool-gray);
-    color: var(--nav-hover-link-color);
+    color: var(--oxford-blue-3);
 }
 
 .open li {
