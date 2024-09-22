@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Directory | Chamber Panama">
+    <meta property="og:title" content="Discover | Chamber Panama">
     <meta property="og:type" content="website">
     <meta property="og:image"
         content="https://demetrioaris.github.io/wdd231/chamber/images/logo-chamber-modified-small.webp">
@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/discover.css" />
     <script src="/scripts/common.mjs" defer></script>
     <script src="./scripts/home.js" defer></script>
     <link rel="icon" href="images/favicon-main-modified.ico" sizes="48x48" type="image/ico">
@@ -30,7 +30,7 @@
         <h1 class="nameHeader">Panama city<br><span>Chamber of Ecomerces</span></h1>
         <h2></h2>
     </header>
-    <nav class="navigation">
+    <nav>
         <button name="navigation button" id="menu"></button>
         <a href="./index.html" class="nav-link">Home</a>
         <a href="./discover.html" class="nav-link">Discover</a>
@@ -38,23 +38,15 @@
         <a href="./join.html" class="nav-link">Join</a>
     </nav>
     <main>
-        <h2 class="subtitle">Directory</h2>
-        <div class="button-box">
-            <button title="List view" class="mybtn fa-solid fa-list" onclick="buttonView(0); list()">
-                <p>List</p>
-            </button>
-            <button title="Grid view" class="mybtn activebtn fa-solid fa-th-large" onclick="buttonView(1); grid()">
-                <p>grid</p>
-            </button>
-        </div>
 
-        <div id="directory-box"></div>
     </main>
+
     <footer>
         <p>&copy;<span id="currentyear">Lorem</span> Demetrio Aris |
             Panama</p>
         <p id="lastModified">Lorem ipsum</p>
     </footer>
+
 </body>
 
 </html>

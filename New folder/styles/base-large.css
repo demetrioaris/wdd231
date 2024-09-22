@@ -59,7 +59,8 @@
 
     .card-01 ol {
         text-align: left;
-        font-size: 1.1rem; /***have to change it***/
+        font-size: 1.1rem;
+        /***have to change it***/
     }
 
 
@@ -99,7 +100,7 @@
     .certificate02 {
         grid-row: 4;
     }
-    
+
     .certificate03 {
         grid-row: 5;
     }

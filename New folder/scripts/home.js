@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const spotCard = document.createElement('div');
         spotCard.className = `spot-card-0${index}`;
 
-        spotCard.innerHTML = `
+        spotCard.innerHTML =   `
             <div class="title-spot">
                 <h4 id="business-name-0${index}"></h4>
                 <h3 id="tag0${index}"></h3>
