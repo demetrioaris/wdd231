@@ -223,7 +223,6 @@ section p {
 }
 
 .boxButton {
-    width: 100;
     display: flex;
     padding: 5px;
     border-bottom: 1px solid var(--oxford-blue-3);
