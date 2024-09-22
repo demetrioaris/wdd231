@@ -147,7 +147,7 @@ nav li:last-child {
 }
 
 nav a.active {
-    background-color: var(--cool-gray);
+    background-color: var(--true-blue);
     color: var(--oxford-blue-3);
 }
 
