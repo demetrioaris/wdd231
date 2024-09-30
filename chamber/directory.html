@@ -4,48 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta property="og:title" content="Directory | Chamber Panama">
     <meta property="og:type" content="website">
     <meta property="og:image"
         content="https://demetrioaris.github.io/wdd231/chamber/images/logo-chamber-modified-small.webp">
     <meta property="og:url" content="https://demetrioaris.github.io/wdd231/chamber/directory.html">
-    <title>Panama Chamber of Commerce
-    </title>
+
+    <title>Directory | Panama Chamber of Commerce</title>
     <meta name="description" content="Chamber directory, Panama" />
     <meta name="author" content="Demetrio Aris" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/directory.css" />
-    <script src="/scripts/common.mjs" defer></script>
-    <script src="./scripts/home.js" defer></script>
+
+    <script type="module" src="./scripts/app.js"></script>
+
     <link rel="icon" href="images/favicon-main-modified.ico" sizes="48x48" type="image/ico">
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <img class="logo-chamber" src="../chamber/images/logo-chamber-modified-small.webp" alt="Logo Chamber Panama" />
-        <h1 class="nameHeader">Panama city<br><span>Chamber of Ecomerces</span></h1>
-        <h2></h2>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="../chamber/images/logo-chamber-modified-small.webp"
+                    alt="Logo Chamber Panama" />
+                <h1 class="nameHeader">Panamá City<br>Chamber of Ecomerces</h1>
+                <button name="navigation button" id="menu"></button>
+            </div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+                <li><a class="active" href="./directory.html">Directory</a></li>
+                <li><a href="./join.html">Join</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class="navigation">
-        <button name="navigation button" id="menu"></button>
-        <a href="./index.html" class="nav-link">Home</a>
-        <a href="./discover.html" class="nav-link">Discover</a>
-        <a href="./directory.html" class="nav-link">Directory</a>
-        <a href="./join.html" class="nav-link">Join</a>
-    </nav>
+
     <main>
-        <h2 class="subtitle">Directory</h2>
+        <h2 class="Main-title">Directory</h2>
         <div class="button-box">
-            <button title="List view" class="mybtn fa-solid fa-list" onclick="buttonView(0); list()">
-                <p>List</p>
-            </button>
-            <button title="Grid view" class="mybtn activebtn fa-solid fa-th-large" onclick="buttonView(1); grid()">
-                <p>grid</p>
-            </button>
+            <button title="List view" class='mybtn activebtn' id="list-view-btn"><i class='fas fa-list'></i></button>
+            <button title="Grid view" class='mybtn' id="grid-view-btn"><i class='fas fa-border-all'></i></button>
         </div>
 
         <div id="directory-box"></div>

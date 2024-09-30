@@ -1,0 +1,131 @@
+/* Directory Page */
+main {
+    margin: 0 10px;
+}
+
+.Main-title {
+    color: var(--headline-color-on-white);
+    text-align: center;
+    font-size: var(--font-size-large);
+    margin: 20px;
+    padding: 5px 0;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: center;
+    background-color: var(--White);
+    gap: 10px;
+    width: 110px;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px solid var(--King-Kong);
+    border-radius: 10px;
+    background-color: var(--White);
+    color: var(--King-Kong);
+}
+
+@media (max-width: 740px) {
+    .button-box {
+        display: none;
+    }
+}
+
+button {
+    border: 1px solid var(--King-Kong);
+    border-radius: 5px;
+    padding: 5px;
+    width: 50px;
+    text-transform: uppercase;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--White); /* Fondo blanco por defecto */
+    color: var(--King-Kong); /* Texto de color King Kong por defecto */
+}
+
+/* Estilo cuando el botón está activo */
+button.activebtn {
+    background-color: var(--King-Kong); /* Fondo King Kong */
+    color: var(--White); /* Texto blanco */
+}
+
+/* Para los íconos dentro de los botones */
+.fa-border-all,
+.fa-list {
+    color: inherit; /* Heredar el color del botón */
+}
+
+button:hover {
+    background-color: var(--King-Kong);
+    color: var(--White);
+}
+
+#directory-box.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+#directory-box.list-view {
+    display: block;
+}
+
+/* #directory-box.list-view .card-box {
+    margin: 30px;
+} */
+
+.card-box {
+    padding: 20px;
+    border: 2px solid #171210;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: var(--paragraph-color-on-color);
+    overflow: hidden;
+}
+
+.card-box img {
+    object-fit: cover;
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: var(--paragraph-color-on-color);
+}
+
+.card-box h3, li {
+    color: var(--headline-color-on-white);
+    font-size: var(--font-size-base);
+}
+
+.card-box ul {
+    padding: 10px;
+}
+
+.card-box a:link, .card-box a {
+    text-decoration: none;
+    color: var(--oxford-blue);
+}
+
+.card-box a:visited {
+    text-decoration: underline;
+}
+
+.card-box a:hover {
+    font-weight: bold;
+    color: var(--yale-blue);
+}
+
+.card-box a:active {
+    text-decoration: underline;
+}
+
+
+/* Larger Views ******************************/
+@media (min-width: 860px) {
+    main {
+        margin: 0 40px;
+    }
+}

@@ -1,34 +1,39 @@
 export function initializeCommon() {
-    document.addEventListener('DOMContentLoaded', () => {
-        const hamButton = document.querySelector('#menu');
-        const navigation = document.querySelector('.navigation');
+    document.addEventListener("DOMContentLoaded", () => {
+        // Menu toggle functionality
+        const hamButton = document.querySelector("#menu");
+        const navigation = document.querySelector("nav");
 
-        hamButton.addEventListener('click', () => {
-            navigation.classList.toggle('open');
-            hamButton.classList.toggle('open');
+        hamButton.addEventListener("click", () => {
+            navigation.classList.toggle("open");
+            hamButton.classList.toggle("open");
         });
-    });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const currentLocation = window.location.pathname;
-        const navLinks = document.querySelectorAll('.nav-link');
+        // Update footer with the current year and last modified date
+        document.getElementById("currentyear").textContent =
+            new Date().getFullYear();
+        document.getElementById(
+            "lastModified"
+        ).textContent = `Last Modified: ${document.lastModified}`;
 
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentLocation) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    });
+        // Navigation bar active function
+        const options = navigation.getElementsByTagName("a");
 
+        for (let i = 0; i < options.length; i++) {
+            options[i].addEventListener("click", function () {
+                const current = document.getElementsByClassName("active");
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const currentYear = new Date().getFullYear();
-        const lastModified = document.lastModified;
-        const copyrightYearElement = document.getElementById('currentyear');
-        const lastModifiedElement = document.getElementById('lastModified');
-        copyrightYearElement.textContent = currentYear;
-        lastModifiedElement.textContent = `Last update: ${lastModified}`;
+                // Only try to remove the active class if there is an existing active element
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(
+                        " active",
+                        ""
+                    );
+                }
+
+                // Add active class to the clicked element
+                this.className += " active";
+            });
+        }
     });
 }

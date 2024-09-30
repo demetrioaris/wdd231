@@ -1,0 +1,277 @@
+:root {
+    /* CSS HEX */
+    --Black: #000000;
+    --King-Kong: #171210;
+    --Film-Noir: #443932;
+    --Lunar-Base: #868686;
+    --Big-Fish-to-Fry: #dadce0;
+    --White: #ffffff;
+
+    /* Fonts */
+
+    --poppins-heading-font: "Poppins", sans-serif;
+    --poppins-regular-font-weight: 400;
+    --poppins-bold-font-weight: 700;
+    --poppins-regular-font-style: normal;
+
+    --open-sans-paragraph-font: "Open Sans", sans-serif;
+    --open-sans-font-weight: 400;
+    --open-sans-font-style: normal;
+
+    --font-size-base: 1rem;
+    --font-size-large: 1.25rem;
+    --font-size-small: 0.875rem;
+    --font-size-extra-large: 1.5rem;
+
+    /* Text Colors */
+    /* Headlines on a white background */
+    --headline-color-on-white: var(--King-Kong);
+    /* Headlines on a colored background */
+    --headline-color-on-color: var(--White);
+    /* Paragraph text on a white background */
+    --paragraph-color-on-white: var(--White);
+    /* Paragraph text on a colored background */
+    --paragraph-color-on-color: var(--Film-Noir);
+
+    --paragraph-background-color: var(--Film-Noir);
+
+    /* Navigation Colors */
+    --nav-link-color: var(--Film-Noir);
+    --nav-background-color: var(--White);
+    --nav-hover-link-color: var(--King-Kong);
+    --nav-hover-background-color: var(--Lunar-Base);
+
+    /* Button Colors*/
+    --btn-background-color: var(--King-Kong);
+    --btn-background-white: var(--white);
+    --btn-font-on-color: var(--White);
+    --btn-font-on-white: var(--Lunar-Base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+    font-style: var(--poppins-regular-font-style);
+}
+
+p {
+    font-family: var(--open-sans-paragraph-font);
+    font-weight: var(--open-sans-font-style);
+    font-style: var(--open-sans-font-style);
+}
+
+/* mobile **************************/
+
+header {
+
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--headline-color-on-color);
+}
+
+nav {
+    width: 100%;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+header img {
+    width: 75px;
+    padding: 10px;
+    flex-grow: 0;
+}
+
+header h1 {
+    color: var(--headline-color-on-white);
+    display: inline-block;
+    text-align: left;
+    padding: 5px;
+    font-size: var(--font-size-base);
+    flex-grow: 1;
+}
+
+/*Hamburger menu*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: none;
+    font-weight: var(--open-sans-font-style);
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    color: var(--nav-link-color);
+    transition: color 0.2s ease;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/*nav a:hover:not(.active) {
+    color: var(--nav-hover-link-color);
+}*/
+nav a:hover {
+    color: var(--nav-hover-link-color);
+}
+nav a:hover::after,
+nav a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+nav a::after,
+nav a::before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0;
+    right: 0;
+    height: 3px;
+}
+
+nav a::before {
+    transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: var(--Lunar-Base);
+}
+
+nav a::after {
+    transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+    background: var(--King-Kong);
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+
+/*nav a.active {
+    color: var(--Black);
+}*/
+
+#menu {
+    display: block;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: var(--White);
+    color: var(--King-Kong);
+}
+
+#menu {
+    font-family: var(--poppins-heading-font);
+    position: absolute;
+    top: 1.3rem;
+    right: 1.5rem;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#menu::before {
+    content: "≡";
+}
+
+.open li {
+    display: block;
+}
+
+#menu.open::before {
+    content: "X";
+}
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+}
+
+footer {
+    border-top: 1px solid #00000051;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    color: var(--paragraph-color-on-white);
+}
+
+footer p:first-child {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Larger Views ******************************/
+@media (min-width: 860px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    header h1 {
+        padding: 10px 0;
+        font-size: var(--font-size-large);
+    }
+
+    nav {
+        flex-grow: 2;
+        display: flex; /* Aseguramos que el nav esté visible y use flexbox */
+        justify-content: flex-end;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between; /* Distribuir uniformemente los elementos del menú */
+        flex-grow: 1;
+    }
+
+    nav ul li {
+        display: block;
+        flex: 1 1 auto; /* Flexibilidad para que los elementos se ajusten automáticamente */
+    }
+
+    nav ul > li:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    #menu {
+        display: none; /* Ocultamos el botón de menú en pantallas grandes */
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
