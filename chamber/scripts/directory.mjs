@@ -51,7 +51,7 @@ export function initializeDirectory() {
             data.forEach((company) => {
                 cards += `
                     <div class="card-box">
-                        <img src="${company.logo}" alt="${company.Name} logo">
+                        <img class="logo" loading="lazy" src="${company.logo}" alt="${company.Name} logo" width="200" height="200" >
                         <h3>${company.Name}</h3>
                         <ul>
                             <li><strong>Industry:</strong> ${company.Industry}</li>

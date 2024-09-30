@@ -97,7 +97,7 @@ header {
     display: inline-block;
 }
 
-header img {
+.logo-chamber {
     width: 70px;
     padding: 10px 5px;
 }
@@ -107,7 +107,6 @@ header h1 {
     text-align: left;
     padding: 5px;
     font-size: var(--font-size-base);
-    
 }
 
 /* mobile **************************/
@@ -220,7 +219,7 @@ footer p:first-child {
         justify-content: space-around;
     }
 
-    header img {
+    .logo-chamber {
         width: 80px;
     }
 

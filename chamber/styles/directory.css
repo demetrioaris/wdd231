@@ -14,7 +14,6 @@ main {
 .button-box {
     display: flex;
     flex-direction: row;
-    align-items: left;
     justify-content: center;
     background-color: var(--White);
     gap: 10px;
@@ -86,7 +85,7 @@ button:hover {
     overflow: hidden;
 }
 
-.card-box img {
+.logo {
     object-fit: cover;
     width: 100px;
     max-width: 100%;
