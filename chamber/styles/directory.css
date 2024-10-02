@@ -26,12 +26,6 @@ main {
     color: var(--King-Kong);
 }
 
-@media (max-width: 740px) {
-    .button-box {
-        display: none;
-    }
-}
-
 button {
     border: 1px solid var(--King-Kong);
     border-radius: 5px;
@@ -45,12 +39,10 @@ button {
     color: var(--King-Kong); 
 }
 
-
 button.activebtn {
     background-color: var(--King-Kong); 
     color: var(--White);
 }
-
 
 .fa-border-all,
 .fa-list {
@@ -68,20 +60,12 @@ button:hover {
     gap: 20px;
 }
 
-#directory-box.list-view {
-    display: block;
-}
-
-/* #directory-box.list-view .card-box {
-    margin: 30px;
-} */
-
 .card-box {
     padding: 20px;
-    border: 2px solid #171210;
+    border: 2px solid var(--King-Kong);
     border-radius: 10px;
     margin: 10px;
-    background-color: var(--paragraph-color-on-color);
+    background-color: var(--White);
     overflow: hidden;
 }
 
@@ -94,8 +78,9 @@ button:hover {
     background-color: var(--paragraph-color-on-color);
 }
 
-.card-box h3, li {
-    color: var(--headline-color-on-white);
+.card-box h3, 
+.card-box ul li {
+    color: var(--King-Kong);
     font-size: var(--font-size-base);
 }
 
@@ -121,10 +106,64 @@ button:hover {
     text-decoration: underline;
 }
 
+/* Vista en lista */
+#directory-box.list-view {
+    display: block;
+}
 
-/* Larger Views ******************************/
+#directory-box.list-view .card-box {
+    margin: 30px;
+}
+
 @media (min-width: 860px) {
-    main {
-        margin: 0 40px;
+
+    #directory-box.list-view {
+        display: table;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 0 15px;
+    }
+
+    #directory-box.list-view .card-box {
+        display: table-row;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    #directory-box.list-view .card-box > * {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 15px;
+        background-color: var(--White);
+        border: 2px solid var(--King-Kong);
+        border-radius: 10px;
+    }
+
+    #directory-box.list-view .card-box .logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    #directory-box.list-view .card-box h3 {
+        font-size: 1.5rem;
+    }
+
+    #directory-box.list-view .card-box ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #directory-box.list-view .card-box ul li {
+        font-size: 1rem;
+    }
+
+    #directory-box.list-view .card-box ul li a {
+        font-size: 1rem;
+        text-decoration: underline;
+        color: var(--oxford-blue);
     }
 }
