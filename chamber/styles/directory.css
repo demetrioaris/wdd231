@@ -41,20 +41,20 @@ button {
     outline: none;
     font-weight: bold;
     cursor: pointer;
-    background-color: var(--White); /* Fondo blanco por defecto */
-    color: var(--King-Kong); /* Texto de color King Kong por defecto */
+    background-color: var(--White); 
+    color: var(--King-Kong); 
 }
 
-/* Estilo cuando el botón está activo */
+
 button.activebtn {
-    background-color: var(--King-Kong); /* Fondo King Kong */
-    color: var(--White); /* Texto blanco */
+    background-color: var(--King-Kong); 
+    color: var(--White);
 }
 
-/* Para los íconos dentro de los botones */
+
 .fa-border-all,
 .fa-list {
-    color: inherit; /* Heredar el color del botón */
+    color: inherit; 
 }
 
 button:hover {
