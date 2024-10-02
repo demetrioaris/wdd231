@@ -106,7 +106,6 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Vista en lista */
 #directory-box.list-view {
     display: block;
 }
