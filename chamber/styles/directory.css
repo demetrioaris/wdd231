@@ -15,19 +15,19 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: var(--White);
+    background-color: var(--white);
     gap: 10px;
     width: 110px;
     height: 40px;
     margin: 0 auto;
-    border: 2px solid var(--King-Kong);
+    border: 2px solid var(--king-kong);
     border-radius: 10px;
-    background-color: var(--White);
-    color: var(--King-Kong);
+    background-color: var(--white);
+    color: var(--king-kong);
 }
 
 button {
-    border: 1px solid var(--King-Kong);
+    border: 1px solid var(--king-kong);
     border-radius: 5px;
     padding: 5px;
     width: 50px;
@@ -35,13 +35,13 @@ button {
     outline: none;
     font-weight: bold;
     cursor: pointer;
-    background-color: var(--White); 
-    color: var(--King-Kong); 
+    background-color: var(--white); 
+    color: var(--king-kong); 
 }
 
 button.activebtn {
-    background-color: var(--King-Kong); 
-    color: var(--White);
+    background-color: var(--king-kong); 
+    color: var(--white);
 }
 
 .fa-border-all,
@@ -50,8 +50,8 @@ button.activebtn {
 }
 
 button:hover {
-    background-color: var(--King-Kong);
-    color: var(--White);
+    background-color: var(--king-kong);
+    color: var(--white);
 }
 
 #directory-box.grid-view {
@@ -62,10 +62,10 @@ button:hover {
 
 .card-box {
     padding: 20px;
-    border: 2px solid var(--King-Kong);
+    border: 2px solid var(--king-kong);
     border-radius: 10px;
     margin: 10px;
-    background-color: var(--White);
+    background-color: var(--white);
     overflow: hidden;
 }
 
@@ -80,7 +80,7 @@ button:hover {
 
 .card-box h3, 
 .card-box ul li {
-    color: var(--King-Kong);
+    color: var(--king-kong);
     font-size: var(--font-size-base);
 }
 
@@ -137,8 +137,8 @@ button:hover {
         display: table-cell;
         vertical-align: middle;
         padding: 15px;
-        background-color: var(--White);
-        border: 2px solid var(--King-Kong);
+        background-color: var(--white);
+        border: 2px solid var(--king-kong);
         border-radius: 10px;
     }
 

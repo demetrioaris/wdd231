@@ -1,11 +1,11 @@
-
-document.addEventListener('DOMContentLoaded', () => {
-    const spotlightsMainBox = document.querySelector('.spotlights-main-box');
+//export function initializeHome() {
+document.addEventListener("DOMContentLoaded", () => {
+    const spotlightsMainBox = document.querySelector(".spotlights-main-box");
     spotlightsMainBox.innerHTML = "";
 
     const createSpotCard = (index) => {
-        const spotCard = document.createElement('div');
-        spotCard.className = `spot-card-0${index}`;
+        const spotCard = document.createElement("div");
+        spotCard.className = `spot-card spot-card-0${index}`;
 
         spotCard.innerHTML = `
                 <div class="title-spot">
@@ -31,32 +31,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const nameBusiness01 = document.querySelector('#business-name-01');
-    const nameBusiness02 = document.querySelector('#business-name-02');
-    const nameBusiness03 = document.querySelector('#business-name-03');
+    const nameBusiness01 = document.querySelector("#business-name-01");
+    const nameBusiness02 = document.querySelector("#business-name-02");
+    const nameBusiness03 = document.querySelector("#business-name-03");
 
-    const industry01 = document.querySelector('#tag01');
-    const industry02 = document.querySelector('#tag02');
-    const industry03 = document.querySelector('#tag03');
+    const industry01 = document.querySelector("#tag01");
+    const industry02 = document.querySelector("#tag02");
+    const industry03 = document.querySelector("#tag03");
 
-    const phone01 = document.querySelector('#phone-01');
-    const phone02 = document.querySelector('#phone-02');
-    const phone03 = document.querySelector('#phone-03');
+    const phone01 = document.querySelector("#phone-01");
+    const phone02 = document.querySelector("#phone-02");
+    const phone03 = document.querySelector("#phone-03");
 
-    const url01 = document.querySelector('#url-01');
-    const url02 = document.querySelector('#url-02');
-    const url03 = document.querySelector('#url-03');
+    const url01 = document.querySelector("#url-01");
+    const url02 = document.querySelector("#url-02");
+    const url03 = document.querySelector("#url-03");
 
-    const member01 = document.querySelector('#member-since-01');
-    const member02 = document.querySelector('#member-since-02');
-    const member03 = document.querySelector('#member-since-03');
+    const member01 = document.querySelector("#member-since-01");
+    const member02 = document.querySelector("#member-since-02");
+    const member03 = document.querySelector("#member-since-03");
 
-    const img01 = document.querySelector('#img-01-spot');
-    const img02 = document.querySelector('#img-02-spot');
-    const img03 = document.querySelector('#img-03-spot');
+    const img01 = document.querySelector("#img-01-spot");
+    const img02 = document.querySelector("#img-02-spot");
+    const img03 = document.querySelector("#img-03-spot");
 
     try {
-        const response = await fetch('data/members.json');
+        const response = await fetch("data/members.json");
         const data = await response.json();
 
         const shuffledData = data.sort(() => 0.5 - Math.random());
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         members.forEach((member, index) => {
             if (member && shuffledData[index]) {
-                member.innerHTML = `Member since: ${shuffledData[index].MemberSince}`;
+                member.innerHTML = `Membership level: ${shuffledData[index].Membership}`;
             }
         });
 
@@ -105,22 +105,28 @@ document.addEventListener("DOMContentLoaded", async () => {
                 img.alt = `${shuffledData[index].Name} logo`;
             }
         });
-
     } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
     }
 });
 
-const myKey = '90158c8799bb28ca5c3054efdcbe85fd';
-const myLat = '8.999893532275784';
-const myLon = '-79.52049637702123';
+const myKey = "90158c8799bb28ca5c3054efdcbe85fd";
+const myLat = "8.999893532275784";
+const myLon = "-79.52049637702123";
 
 const time = new Date();
 const day = time.getDay();
-const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+];
 
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
     const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}`;
 
     async function apiFetch() {
@@ -138,17 +144,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const displayResults = (data) => {
-        const eventMainBox = document.querySelector('#weather-main');
-        eventMainBox.innerHTML = '';
+        const eventMainBox = document.querySelector("#weather-main");
+        eventMainBox.innerHTML = "";
 
         const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         let desc = data.weather[0].description;
 
         eventMainBox.innerHTML = `
                 <div class="current-weather">
-                    <h3>The current Weather in: <span id="city-name">${data.name}</span><br><br>${weekdays[day]}</h3>
+                    <h2>The current Weather in: <span id="city-name">${
+                        data.name
+                    }</span></h2>
+                    <h4>${weekdays[day]}</h4>
                     <div class="weather-content"></div>
-                    <p>Temperature <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}&deg;F</span></p>
+                    <p>Temperature <span id="current-temp">${parseFloat(
+                        data.main.temp
+                    ).toFixed(0)}&deg;F</span></p>
                     <figure>
                         <img id="weather-icon" src="${iconsrc}" alt="${desc}">
                         <figcaption>${desc}</figcaption>
@@ -160,8 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     apiFetch();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLon}&appid=${myKey}`;
 
     async function apiForecastFetch() {
@@ -180,11 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const displayResultsForecast = (forecastData) => {
-        const weatherForecast = document.querySelector('#weather-forecast');
-        weatherForecast.innerHTML = '';
+        const weatherForecast = document.querySelector("#weather-forecast");
+        weatherForecast.innerHTML = "";
 
-        const forecast = document.createElement('article');
-        forecast.className = 'forecast';
+        const forecast = document.createElement("article");
+        forecast.className = "forecast";
         forecast.innerHTML = `
                 <h3>3-Days Weather Forecast</h3>
                 <div class="main-day-box">
@@ -218,19 +228,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const dailyForecasts = forecastData.list.slice(0, 3);
         dailyForecasts.forEach((dailyData, index) => {
-
             //let decimalsCero =  parseFloat(dailyData.main.temp).toFixed(0);
             //console.log(typeof(decimalsCero))
             //console.log(decimalsCero)
-            document.getElementById(`weather-icon-${index + 1}`).src = `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`;
-            document.getElementById(`figcaption-${index + 1}`).textContent = dailyData.weather[0].description;
+            document.getElementById(
+                `weather-icon-${index + 1}`
+            ).src = `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`;
+            document.getElementById(`figcaption-${index + 1}`).textContent =
+                dailyData.weather[0].description;
 
-            document.getElementById(`temp-${index + 1}`).textContent = `${parseFloat(dailyData.main.temp).toFixed(0)}°F`;
+            document.getElementById(
+                `temp-${index + 1}`
+            ).textContent = `${parseFloat(dailyData.main.temp).toFixed(0)}°F`;
         });
     };
 
     apiForecastFetch();
 });
-
-
-
+//}

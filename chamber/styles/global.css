@@ -1,11 +1,11 @@
 :root {
     /* CSS HEX */
-    --Black: #000000;
-    --King-Kong: #171210;
-    --Film-Noir: #443932;
-    --Lunar-Base: #868686;
-    --Big-Fish-to-Fry: #dadce0;
-    --White: #ffffff;
+    --black: #000000;
+    --king-kong: #171210;
+    --film-noir: #443932;
+    --lunar-base: #868686;
+    --big-fish-to-fry: #dadce0;
+    --white: #ffffff;
 
     --oxford-blue: #0a1f44;
     --alice-blue: #f0f8ff;
@@ -27,12 +27,6 @@
     --font-size-small: 0.875rem;
     --font-size-extra-large: 1.5rem;
 
-    /* Primary Colors */
-    --king-kong: var(--King-Kong); /* Darker Color */
-    --white: var(--White); /* Lightest Color */
-    --film-noir: var(--Film-Noir); /* Dark Gray */
-    --lunar-base: var(--Lunar-Base); /* Lighter Gray */
-
     /* Text Colors */
     /* Headlines */
     --headline-color-on-white: var(--king-kong); /* On light backgrounds */
@@ -44,25 +38,34 @@
 
     /* Background Colors */
     --paragraph-background-color: var(--film-noir);
+    --paragraph-background-white: var(--white);
 
     /* Navigation Colors */
     --nav-link-color: var(--film-noir);
     --nav-background-color: var(--white);
     --nav-hover-link-color: var(--white);
-    --nav-hover-background-color: var(--Film-Noir);
+    --nav-hover-background-color: var(--film-noir);
 
     /* Button Colors */
     --btn-background-color: var(--king-kong); /* Primary button background */
     --btn-background-white: var(--white); /* Button background for white */
     --btn-font-on-color: var(--white); /* Text color on dark backgrounds */
     --btn-font-on-white: var(--lunar-base); /* Text color on white background */
+
+    /* Common Styles */
+    --box-shadow: 0 4px 8px var(--paragraph-background-color);
+    --box-shadow-dark: 0 4px 8px var(--eerie-black);
+    --border-radius: 10px;
+    --transition: transform 0.2s ease-in-out;
 }
+
 
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+button {
     font-family: var(--poppins-heading-font);
     font-weight: var(--poppins-bold-font-weight);
     font-style: var(--poppins-regular-font-style);
@@ -119,15 +122,13 @@ header h1 {
     padding: 8px 12px;
     background-color: var(--headline-color-on-color);
     color: var(--headline-color-on-white);
-}
-
-#menu {
-    font-family: Roboto, sans-serif;
+    font-family: var(--poppins-heading-font); 
     position: absolute;
     top: 1.6rem;
     right: 1.5rem;
     cursor: pointer;
     border: 0;
+    font-weight: bold;
 }
 
 #menu::before {
@@ -191,7 +192,6 @@ footer {
     padding: 10px;
 }
 
-
 footer p {
     margin: 0;
 }
@@ -241,9 +241,6 @@ footer p:first-child {
         padding: 0;
     }
 
-    nav li {
-        display: none;
-    }
 
     nav a {
         position: relative;
@@ -278,12 +275,12 @@ footer p:first-child {
 
     nav a::before {
         transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
-        background: var(--Lunar-Base);
+        background: var(--lunar-base);
     }
 
     nav a::after {
         transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-        background: var(--King-Kong);
+        background: var(--king-kong);
     }
 
     nav li:last-child {
@@ -293,5 +290,4 @@ footer p:first-child {
     #menu {
         display: none;
     }
-
 }
