@@ -3,32 +3,25 @@ export function initializeCommon() {
         const hamButton = document.querySelector("#menu");
         const navigation = document.querySelector("nav");
 
+        // Toggle navigation menu
         hamButton.addEventListener("click", () => {
             navigation.classList.toggle("open");
             hamButton.classList.toggle("open");
         });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const bodyId = document.body.id; // Obtener el ID del <body>
+        const navLinks = document.querySelectorAll("nav .nav-a");
 
-        document.getElementById("currentyear").textContent =
-            new Date().getFullYear();
-        document.getElementById(
-            "lastModified"
-        ).textContent = `Last Modified: ${document.lastModified}`;
-
-        const options = navigation.getElementsByTagName("a");
-
-        for (let i = 0; i < options.length; i++) {
-            options[i].addEventListener("click", function () {
-                const current = document.getElementsByClassName("active");
-
-                if (current.length > 0) {
-                    current[0].className = current[0].className.replace(
-                        " active",
-                        ""
-                    );
-                }
-
-                this.className += " active";
-            });
-        }
+        navLinks.forEach((link) => {
+            // Verificar si el enlace contiene el href correspondiente al id de la página
+            if (
+                link.getAttribute("href").includes(bodyId.replace("-page", ""))
+            ) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
     });
 }
