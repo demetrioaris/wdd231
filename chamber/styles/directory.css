@@ -88,20 +88,24 @@ button:hover {
     padding: 10px;
 }
 
+td a:link, td a,
 .card-box a:link, .card-box a {
     text-decoration: none;
     color: var(--oxford-blue);
 }
 
+td a:visited,
 .card-box a:visited {
     text-decoration: underline;
 }
 
+td a:hover,
 .card-box a:hover {
     font-weight: bold;
     color: var(--yale-blue);
 }
 
+td a:active,
 .card-box a:active {
     text-decoration: underline;
 }

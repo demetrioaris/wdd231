@@ -245,4 +245,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     apiForecastFetch();
 });
+
+async function getEvents() {
+    try {
+        const response = await fetch("data/events.json");
+        const data = await response.json();
+        return data.events;
+    } catch (error) {
+        console.error("Error fetching events:", error);
+        return [];
+    }
+}
+
+async function displayEvents() {
+    const events = await getEvents();
+    const eventsContainer = document.getElementById("events-list");
+
+    eventsContainer.innerHTML = "";
+
+    if (events.length === 0) {
+        eventsContainer.innerHTML = "<p>No upcoming events at this time.</p>";
+        return;
+    }
+
+    events.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    const nextEvents = events.slice(0, 3);
+
+    // Loop through the next 3 events and create HTML to display
+    nextEvents.forEach((event) => {
+        const eventElement = document.createElement("div");
+        eventElement.classList.add("event");
+
+        eventElement.innerHTML = `
+            <h3>${event.name}</h3>
+            <p>Date: ${new Date(event.date).toDateString()}</p>
+        `;
+
+        eventsContainer.appendChild(eventElement);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    displayEvents();
+});
+
 //}
