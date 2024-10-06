@@ -10,7 +10,8 @@
     <meta property="og:image"
         content="https://demetrioaris.github.io/wdd231/chamber/images/logo-chamber-modified-small.webp">
     <meta property="og:url" content="https://demetrioaris.github.io/wdd231/chamber/directory.html">
-    <meta property="og:description, fb:app_id" content="Chamber of Panamá, Join us to get more information">
+    <meta property="og:description" content="Chamber of Panamá, Join us to get more information">
+    <meta property="fb:app_id" content="your-app-id-here">
 
 
     <title>Directory | Panama Chamber of Commerce</title>
@@ -31,7 +32,7 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/home.css" />
 
-    <script type="module" src="./scripts/app.js" defer></script>
+    <script type="module" src="./scripts/app.js"></script>
     <script src="./scripts/modules/home.js" defer></script>
 
 
@@ -46,7 +47,7 @@
                 <img class="logo-chamber" src="../chamber/images/logo-chamber-modified-small.webp"
                     alt="Logo Chamber Panama" />
                 <h1 class="nameHeader">Panamá City<br>Chamber of Ecomerces</h1>
-                <button name="navigation button" id="menu"></button>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
             </div>
             <ul>
                 <li><a class="active" href="./index.html">Home</a></li>
@@ -71,7 +72,7 @@
                 <p>Enhance your business network, access exclusive resources, and drive local economic growth.</p>
                 <p>Click here to become a member and start making a difference.</p>
                 <button class="join-us" name="join">
-                    <a href="/chamber/join.html">Join us</a>
+                    <a class="join-us" href="/chamber/join.html">Join us</a>
                 </button>
             </div>
         </section>
