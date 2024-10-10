@@ -8,13 +8,18 @@ export function initializeCommon() {
             navigation.classList.toggle("open");
             hamButton.classList.toggle("open");
         });
+        // footer
+        document.getElementById("currentyear").textContent =
+            new Date().getFullYear();
+        document.getElementById(
+            "lastModified"
+        ).textContent = `Last Modified: ${document.lastModified}`;
     });
     document.addEventListener("DOMContentLoaded", () => {
         const bodyId = document.body.id; // Obtener el ID del <body>
         const navLinks = document.querySelectorAll("nav .nav-a");
 
         navLinks.forEach((link) => {
-            // Verificar si el enlace contiene el href correspondiente al id de la página
             if (
                 link.getAttribute("href").includes(bodyId.replace("-page", ""))
             ) {
