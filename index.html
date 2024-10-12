@@ -28,7 +28,9 @@
 
 <body>
     <header>
-        <img src="images/demetrio_photo-171px.png" alt="Demetrio Aris photo">
+        <div class="contenedor">
+            <img class="avatar" src="images/demetrio_photo-171px.png" alt="Demetrio Aris photo">
+        </div>
         <h1>Demetrio Aris</h1>
         <button id="menu" title="Menu"></button>
     </header>
@@ -67,9 +69,9 @@
         <section class="certificate-box">
             <h2>Web and Computer Programming certificate</h2>
             <div class="boxButton">
-                <button value="all" title="Filter button">All</button>
-                <button value="cse" title="Filter button">CSE</button>
-                <button value="wdd" title="Filter button">WDD</button>
+                <button class="courseButton" value="all" title="Filter button">All</button>
+                <button class="courseButton" value="cse" title="Filter button">CSE</button>
+                <button class="courseButton" value="wdd" title="Filter button">WDD</button>
             </div>
             <div class="boxcertificate01 boxCourse"></div>
             <dialog id="courses-details"></dialog>
@@ -81,6 +83,7 @@
         <p>&copy;<span id="currentyear">Lorem</span> Demetrio Aris |
             Panama</p>
         <p id="lastModified">Lorem ipsum</p>
+        
     </footer>
 </body>
 

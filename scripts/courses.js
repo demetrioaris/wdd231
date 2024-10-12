@@ -27,16 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 certificate.container.appendChild(courseDiv);
             }
 
-            // Display course details on click
             courseDiv.addEventListener("click", () => {
                 displayCourseDetails(course);
             });
         });
 
-        updateCredits("ALL"); // Inicializa con todos los créditos
+        updateCredits("ALL");
     }
 
-    // Función para actualizar los créditos según el filtro seleccionado
+
     function updateCredits(filter) {
         let totalCredits = 0;
 
@@ -51,10 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.getElementById(
             "totalCreditsCert01"
-        ).textContent = `Total Credits: ${totalCredits}`;
+        ).innerHTML = `<strong>Total Credits:</strong> ${totalCredits}`;
     }
 
-    // Filtrar cursos y actualizar créditos
     const boxButtons = document.querySelectorAll(".boxButton button");
     boxButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -68,14 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     filter === "ALL" || filter === subject ? "block" : "none";
             });
 
-            updateCredits(filter); // Actualiza los créditos según el filtro
+            updateCredits(filter); 
         });
     });
 
-    // Automáticamente selecciona el botón "All" al cargar la página
     document.querySelector('.boxButton button[value="all"]').click();
 
-    // Mostrar detalles del curso en un modal
     const courseDetails = document.getElementById("courses-details");
 
     function displayCourseDetails(course) {
@@ -91,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         courseDetails.showModal();
 
-        // Cerrar el modal al hacer clic en el botón de cerrar
         document.getElementById("closeModal").addEventListener("click", () => {
             courseDetails.close();
         });
