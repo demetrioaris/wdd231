@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         urls.forEach((url, index) => {
             if (url && shuffledData[index]) {
                 url.href = `${shuffledData[index].Website}`;
-                url.innerHTML = `Link to the website`;
+                url.innerHTML = `Visite the website`;
             }
         });
 

@@ -1,4 +1,102 @@
 document.addEventListener("DOMContentLoaded", () => {
+    function output(courses) {
+        const certificates = {
+            "Web and Computer Programming": {
+                container: document.querySelector(".boxcertificate01"),
+                totalCredits: 0,
+                totalCreditsElement:
+                    document.getElementById("totalCreditsCert01"),
+            },
+        };
+
+        courses.forEach((course) => {
+            const courseDiv = document.createElement("div");
+            courseDiv.classList.add(
+                "course",
+                course.completed ? "courseComplete" : "courseNoComplete"
+            );
+            courseDiv.setAttribute("data-subject", course.subject);
+            courseDiv.setAttribute("data-credits", course.credits);
+
+            const courseTitle = document.createElement("h3");
+            courseTitle.textContent = `${course.subject} ${course.number}`;
+            courseDiv.appendChild(courseTitle);
+
+            const certificate = certificates[course.certificate];
+            if (certificate) {
+                certificate.container.appendChild(courseDiv);
+            }
+
+            // Display course details on click
+            courseDiv.addEventListener("click", () => {
+                displayCourseDetails(course);
+            });
+        });
+
+        updateCredits("ALL"); // Inicializa con todos los créditos
+    }
+
+    // Función para actualizar los créditos según el filtro seleccionado
+    function updateCredits(filter) {
+        let totalCredits = 0;
+
+        document.querySelectorAll(".course").forEach((course) => {
+            const credits = parseInt(course.getAttribute("data-credits"), 10);
+            const subject = course.getAttribute("data-subject").toUpperCase();
+
+            if (filter === "ALL" || filter === subject) {
+                totalCredits += credits;
+            }
+        });
+
+        document.getElementById(
+            "totalCreditsCert01"
+        ).textContent = `Total Credits: ${totalCredits}`;
+    }
+
+    // Filtrar cursos y actualizar créditos
+    const boxButtons = document.querySelectorAll(".boxButton button");
+    boxButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const filter = button.value.toUpperCase();
+
+            document.querySelectorAll(".course").forEach((course) => {
+                const subject = course
+                    .getAttribute("data-subject")
+                    .toUpperCase();
+                course.style.display =
+                    filter === "ALL" || filter === subject ? "block" : "none";
+            });
+
+            updateCredits(filter); // Actualiza los créditos según el filtro
+        });
+    });
+
+    // Automáticamente selecciona el botón "All" al cargar la página
+    document.querySelector('.boxButton button[value="all"]').click();
+
+    // Mostrar detalles del curso en un modal
+    const courseDetails = document.getElementById("courses-details");
+
+    function displayCourseDetails(course) {
+        courseDetails.innerHTML = `
+            <button id="closeModal">X</button>
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p>${course.description}</p>
+            <p><strong>Technologies</strong>: ${course.technology.join(
+                ", "
+            )}</p>
+        `;
+        courseDetails.showModal();
+
+        // Cerrar el modal al hacer clic en el botón de cerrar
+        document.getElementById("closeModal").addEventListener("click", () => {
+            courseDetails.close();
+        });
+    }
+
     const courses = [
         {
             subject: "CSE",
@@ -67,57 +165,5 @@ document.addEventListener("DOMContentLoaded", () => {
             completed: false,
         },
     ];
-
-    function output(courses) {
-        const certificates = {
-            "Web and Computer Programming": {
-                container: document.querySelector(".boxcertificate01"),
-                totalCredits: 0,
-                totalCreditsElement:
-                    document.getElementById("totalCreditsCert01"),
-            }
-        };
-
-        courses.forEach((course) => {
-            const courseDiv = document.createElement("div");
-            courseDiv.classList.add(
-                "course",
-                course.completed ? "courseComplete" : "courseNoComplete"
-            );
-            courseDiv.id = "course";
-            courseDiv.setAttribute("data-subject", course.subject);
-
-            const courseTitle = document.createElement("h3");
-            courseTitle.textContent = `${course.subject} ${course.number}`;
-            courseDiv.appendChild(courseTitle);
-
-            const certificate = certificates[course.certificate];
-            if (certificate) {
-                certificate.container.appendChild(courseDiv);
-                certificate.totalCredits += course.credits;
-            }
-        });
-
-        Object.values(certificates).forEach((cert) => {
-            cert.totalCreditsElement.textContent = `Total Credits: ${cert.totalCredits}`;
-        });
-    }
-
     output(courses);
-
-    const boxButtons = document.querySelectorAll(".boxButton button");
-    boxButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const selectButton = button.value.toUpperCase();
-            document.querySelectorAll("#course").forEach((course) => {
-                course.style.display =
-                    selectButton === "ALL" ||
-                    course.dataset.subject === selectButton
-                        ? "block"
-                        : "none";
-            });
-        });
-    });
-
-    document.querySelector('.boxButton button[value="all"]').click();
 });
