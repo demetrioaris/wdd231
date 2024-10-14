@@ -1,8 +1,17 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#menu {
+    display: none;
+}
+
 .thank-you-section {
     max-width: 600px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #17121042;
+    background-color: #1712101d;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     text-align: center;
