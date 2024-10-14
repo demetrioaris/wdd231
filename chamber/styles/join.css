@@ -77,7 +77,7 @@ select {
 }
 
 .card h3 {
-    color: var(--headline-color-on-white);
+    color: var(--king-kong);
 }
 
 .card {
@@ -91,15 +91,15 @@ select {
 
 @keyframes animate {
     0% {
-        background-color: #00366bba;
+        background-color: #0049918e;
     }
 
     50% {
-        background-color: #00366b6f;
+        background-color: #0057ae90;
     }
 
     100% {
-        background-color: #0a1f4448;
+        background-color: #14316374;
     }
 }
 
@@ -232,6 +232,7 @@ select {
     position: absolute;
     display: flex;
     opacity: 0;
+    font-weight: 900;
 }
 .rotating-text p .word .letter {
     transform-origin: center center 25px;
@@ -246,20 +247,25 @@ select {
 .rotating-text p .word .letter.behind {
     transform: rotateX(-90deg);
 }
+
 .alizarin {
-    color: #e74c3c;
+    color: #a51707; /* Darker red */
 }
+
 .wisteria {
-    color: #8e44ad;
+    color: #5b057d; /* Deeper purple */
 }
+
 .peter-river {
-    color: #3498db;
+    color: #033a72; /* Stronger blue */
 }
+
 .emerald {
-    color: #2ecc71;
+    color: #055125; /* Deeper green */
 }
+
 .sun-flower {
-    color: #f1c40f;
+    color: #695a1d; /* Darker yellow */
 }
 
 dialog {
