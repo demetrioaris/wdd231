@@ -59,7 +59,6 @@
     --transition: transform 0.2s ease-in-out;
 }
 
-
 h1,
 h2,
 h3,
@@ -122,7 +121,7 @@ header h1 {
     padding: 8px 12px;
     background-color: var(--headline-color-on-color);
     color: var(--headline-color-on-white);
-    font-family: var(--poppins-heading-font); 
+    font-family: var(--poppins-heading-font);
     position: absolute;
     top: 1.6rem;
     right: 1.5rem;
@@ -241,7 +240,6 @@ footer p:first-child {
         padding: 0;
     }
 
-
     .nav-a {
         position: relative;
         transition: color 0.2s ease;
@@ -249,13 +247,12 @@ footer p:first-child {
         padding: 8px 16px;
         text-decoration: none;
         margin-bottom: 5px;
-        
     }
 
     /*nav a:hover:not(.active) {
     color: var(--nav-hover-link-color);
 }*/
-.nav-a:hover {
+    .nav-a:hover {
         color: var(--nav-hover-link-color);
     }
     .nav-a:hover::after,

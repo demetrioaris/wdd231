@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCredits("ALL");
     }
 
-
     function updateCredits(filter) {
         let totalCredits = 0;
 
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     filter === "ALL" || filter === subject ? "block" : "none";
             });
 
-            updateCredits(filter); 
+            updateCredits(filter);
         });
     });
 
