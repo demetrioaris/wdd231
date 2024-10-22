@@ -148,6 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 void imageContainer.offsetWidth; // Re-trigger CSS animation
                 imageContainer.classList.add("fade-in");
                 updateImage();
-            }, 3000);
+            }, 10000);
         });
 });
