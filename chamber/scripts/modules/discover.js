@@ -27,7 +27,10 @@ function mostrarCalendario(year, month) {
                 month == actual.getMonth() + 1 &&
                 year == actual.getFullYear()
             )
-                resultado += "<td class='hoy'>" + dia + "</td>"; // Día actual con la clase 'hoy'
+                resultado +=
+                    "<td class='hoy'>" +
+                    dia +
+                    "</td>"; // Día actual con la clase 'hoy'
             else
                 resultado +=
                     "<td style='background-color: silver;'>" + dia + "</td>"; // Solo aplica el fondo en los días
@@ -134,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const event = events[currentImageIndex];
                 imageContainer.src = `images/${event.image}`;
                 descriptionContainer.textContent = event.description;
+                imageContainer.alt = event.description;
                 imageContainer.loading = `lazy`;
                 // Move to the next image after 3 seconds
                 currentImageIndex = (currentImageIndex + 1) % events.length;
@@ -150,4 +154,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 updateImage();
             }, 10000);
         });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll(".lazy-image");
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.getAttribute("data-src"); // Asignar el src
+                img.classList.remove("lazy-image"); // Remover la clase si es necesario
+                observer.unobserve(img); // Dejar de observar una vez cargada la imagen
+            }
+        });
+    });
+
+    lazyImages.forEach((image) => {
+        imageObserver.observe(image);
+    });
 });
