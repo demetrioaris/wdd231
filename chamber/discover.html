@@ -30,7 +30,6 @@
 
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/discover.css" />
 
     <script type="module" src="./scripts/app.js"></script>
     <script src="./scripts/modules/discover.js" defer></script>
@@ -57,8 +56,69 @@
         </nav>
     </header>
 
-    <main>
+    <main class="discover">
+        <section class="side-bar">
+            <article class="article-01">
+                <header>
+                    <h3>Demographics</h3>
+                </header>
+                <ul>
+                    <li><strong>Capital:</strong> Panama City</li>
+                    <li><strong>Currencies:</strong> United States Dollar, Panamanian Balboa</li>
+                    <li><strong>Official language:</strong> Spanish</li>
+                    <li><strong>Population:</strong> 4,515,577</li>
+                    <li><strong>Dialing code:</strong> +507</li>
+                </ul>
+            </article>
+            <article class="article-02">
+                <h3>Futere event</h3>
+                <img src="images/event-03.webp" alt="" srcset="">
+            </article>
+            <article class="article-03">
+                <table id="calendar">
+                    <caption></caption> <!-- Moved out of thead -->
+                    <thead>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mie</th>
+                            <th>Jue</th>
+                            <th>Vie</th>
+                            <th>Sab</th>
+                        </tr>
+                    </thead>
+                    <tbody> </tbody>
+                </table>
+            </article>
 
+        </section>
+        <section class="local-photos">
+            <figure>
+                <img data-src="images/load-imagen-01.png" alt="Beautiful sunset over the beach" class="lazy-image">
+                <figcaption>Beautiful sunset over the beach</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/load-imagen-02.png" alt="Historic town square" class="lazy-image">
+                <figcaption>Historic town square</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/load-imagen-03.png" alt="Lush rainforest" class="lazy-image">
+                <figcaption>Lush rainforest</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/load-imagen-04.png" alt="Mountain landscape" class="lazy-image">
+                <figcaption>Mountain landscape</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/load-imagen-05.png" alt="Colonial architecture" class="lazy-image">
+                <figcaption>Colonial architecture</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/load-imagen-06.png" alt="Vibrant city skyline" class="lazy-image">
+                <figcaption>Vibrant city skyline</figcaption>
+            </figure>
+        </section>
     </main>
 
     <footer>
