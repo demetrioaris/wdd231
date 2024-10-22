@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const event = events[currentImageIndex];
                 imageContainer.src = `images/${event.image}`;
                 descriptionContainer.textContent = event.description;
-
+                imageContainer.loading = `lazy`;
                 // Move to the next image after 3 seconds
                 currentImageIndex = (currentImageIndex + 1) % events.length;
             }
