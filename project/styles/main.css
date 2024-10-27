@@ -1,56 +1,44 @@
 :root {
-    /* CSS HSL */
+    /* Color Palette */
     --black: hsla(0, 0%, 0%, 1);
     --eerie-black: hsla(120, 7%, 11%, 1);
     --caribbean-current: hsla(182, 100%, 23%, 1);
     --light-sea-green: hsla(175, 87%, 40%, 1);
-    --hookers-green: hsla(173, 14%, 48%, 1);
+    --hookers-green: hsla(165, 19%, 40%, 1);
     --floral-white: hsla(47, 43%, 96%, 1);
     --white: hsla(0, 0%, 100%, 1);
 
-    /* CSS HSL */
     --prussian-blue: hsla(201, 100%, 14%, 1);
     --fire-engine-red: hsla(0, 69%, 50%, 1);
     --orange-wheel: hsla(31, 100%, 48%, 1);
     --xanthous: hsla(40, 97%, 64%, 1);
     --vanilla: hsla(51, 55%, 82%, 1);
 
-    /* CSS HSL */
     --viridian: hsla(154, 15%, 49%, 1);
-    --cambridge-blue: hsla(147, 21%, 70%, 1);
+    --cambridge-blue: hsla(133, 18%, 59%, 1);
     --mint-green: hsla(167, 29%, 85%, 1);
     --azure-web: hsla(180, 31%, 94%, 1);
     --mint-cream: hsla(133, 100%, 98%, 1);
 
-    /* CSS HSL */
     --ash-gray: hsla(97, 13%, 80%, 1);
-    --cambridge-blue: hsla(133, 18%, 59%, 1);
-    --hookers-green: hsla(165, 19%, 40%, 1);
     --dark-slate-gray: hsla(186, 21%, 26%, 1);
     --charcoal: hsla(201, 20%, 23%, 1);
 
-    /* Font Families */
+    /* Font Settings */
     --header-font-family: "Oswald", sans-serif;
-    --header-font-weight: 400;
-    --header-font-style: normal;
-
     --paragraph-font-family: "Source Sans Pro", monospace;
-    --paragraph-font-weight: 400;
-    --paragraph-font-style: normal;
 
-    /* Font color on color background*/
+    /* Text Colors */
     --font-color-on-background-color: var(--white);
     --font-color-on-background-white: var(--eerie-black);
 
-    /* Mobile view*/
+    /* Font Sizes */
     --font-size-mv-paragraph: 1rem;
     --font-size-mv-header: 1.2rem;
-
-    /* Desktop view*/
     --font-size-dv-paragraph: 1.2rem;
     --font-size-dv-header: 1.4rem;
 
-    /* Nav Bar*/
+    /* Navbar Colors */
     --background-color-header-footer: var(--floral-white);
     --background-color-menu-button: var(--black);
     --link-nav-color: var(--eerie-black);
@@ -301,9 +289,9 @@ main {
 .contact-info {
     display: flex;
     justify-content: space-around;
-    background-color: #1c1c1c; 
+    background-color: #1c1c1c;
     padding: 20px;
-    color: #fff; 
+    color: #fff;
 }
 
 .contact-item h4 {
@@ -328,7 +316,7 @@ main {
 .contact-item img {
     width: 20px;
     margin: 0 5px;
-    vertical-align: middle; /* Alinea los íconos al texto */
+    vertical-align: middle;
 }
 
 .social-box {
@@ -345,9 +333,9 @@ main {
 .action-box img {
     grid-column: 1/4;
     grid-row: 1/4;
-    width: 100%; /* Ajusta el ancho de la imagen al ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-width: 900px; /* Opcional: limita el ancho máximo de la imagen a su tamaño original */
+    width: 100%;
+    height: auto;
+    max-width: 900px;
 }
 
 .action-msg {
