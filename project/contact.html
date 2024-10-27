@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="styles/main.css">
 
     <script type="module" src="scripts/app.mjs"></script>
+    <script src="scripts/module/contact.js"></script>
 
 </head>
 
@@ -48,36 +49,64 @@
     </header>
     <main class="container-contact">
         <section class="contact-box">
-            <div class="image-container">
-                <img src="images/load-imagen-02-900.png" alt="Image">
+            <div class="image-side slideshow" id="slider">
+                <img id="rotating-image" src="images/contact-page-00.png" alt="Image">
             </div>
             <div class="form-container">
-                <form action="../project/my-handling-form-page" method="post">
-                    <h1>Contact us</h1>
-                    <ul>
-                        <li>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="user_name" required />
-                        </li>
-                        <li>
-                            <label for="mail">Email:</label>
-                            <input type="email" id="mail" name="user_email" required />
-                        </li>
-                        <li>
-                            <label for="msg">Message:</label>
-                            <textarea id="msg" name="user_message" required></textarea>
-                        </li>
-                        <li>
-                            <button type="submit">Send your message</button>
-                        </li>
-                    </ul>
+                <form method="get" action="thankyou.html">
+                    <h2 class="sub-title-form">Contact US</h2>
+                    <label class="name-lb">
+                        Name:
+                    </label>
+                    <br><br>
+                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required
+                        placeholder="First">
+                    <br><br>
+                    <input type="text" name="lastName" title="Enter your first name" autocomplete="given-name" required
+                        placeholder="Last">
+                    <br><br>
+                    <label>
+                        Email Address:
+                    </label>
+                    <br><br>
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email"
+                        placeholder="example@email.com" required>
+                    <br><br>
+                    <label>
+                        Mobile Phone Number:
+                    </label>
+                    <br><br>
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required
+                        placeholder="+1 123-456-7890">
+                    <br><br>
+
+                    <label>
+                        Message:
+                    </label>
+                    <br><br>
+                    <textarea name="organizationDescription" title="Describe your business or organization" rows="4"
+                        cols="50"></textarea>
+                    <br><br>
+                    <input type="hidden" name="timestamp" id="timestamp" value="">
+                    <button class="css-button-fully-rounded--grey" type="submit">Submit</button>
+                    <br><br>
                 </form>
+            </div>
+        </section>
+        <article class="box-contact-action">
+            <div class="image-container">
+                <img src="images/load-imagen-02-900.png" alt="Image">
             </div>
             <div class="final-contact">
                 <h3>Explore Panama Like Never Before</h3>
                 <p>Discover Your Next Adventure</p>
+                <div class="contact-item-social">
+                    <a href="#"><img src="images/logos/Facebook_Logo_Secondary.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/logos/logo-x-version-white.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/logos/Instagram_Glyph_White.png" alt="Instagram"></a>
+                </div>
             </div>
-        </section>
+        </article>
     </main>
 
     <footer>
