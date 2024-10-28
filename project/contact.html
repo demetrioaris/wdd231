@@ -22,7 +22,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Code+Pro&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -36,7 +38,8 @@
     <header>
         <nav>
             <div class="box-logo-header">
-                <img class="logo-chamber" src="images/favicon/favicon-circle-200x200.png" alt="Logo Chamber Panama" />
+                <img class="logo-chamber" src="images/favicon/favicon-circle-200x200.png" alt="Panama" width="200"
+                    height="200" loading="lazy" />
                 <h1 class="nameHeader"><strong>Panamá</strong> <br>Experience</h1>
                 <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
             </div>
@@ -50,7 +53,8 @@
     <main class="container-contact">
         <section class="contact-box">
             <div class="image-side slideshow" id="slider">
-                <img id="rotating-image" src="images/contact-page-00.png" alt="Image">
+                <img id="rotating-image" src="images/contact-page-00.png" alt="Image" width="420" height="767"
+                    loading="lazy">
             </div>
             <div class="form-container">
                 <form method="get" action="thankyou.html">
@@ -95,15 +99,18 @@
         </section>
         <article class="box-contact-action">
             <div class="image-container">
-                <img src="images/load-imagen-02-900.png" alt="Image">
+                <img src="images/load-imagen-02-900.png" alt="Image" width="900" height="506">
             </div>
             <div class="final-contact">
                 <h3>Explore Panama Like Never Before</h3>
                 <p>Discover Your Next Adventure</p>
                 <div class="contact-item-social">
-                    <a href="#"><img src="images/logos/Facebook_Logo_Secondary.png" alt="Facebook"></a>
-                    <a href="#"><img src="images/logos/logo-x-version-white.png" alt="Twitter"></a>
-                    <a href="#"><img src="images/logos/Instagram_Glyph_White.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/logos/Facebook_Logo_Secondary.png" alt="Facebook" width="104"
+                            height="104"></a>
+                    <a href="#"><img src="images/logos/logo-x-version-white.png" alt="Twitter" width="104"
+                            height="104"></a>
+                    <a href="#"><img src="images/logos/Instagram_Glyph_White.png" alt="Instagram" width="104"
+                            height="104"></a>
                 </div>
             </div>
         </article>
