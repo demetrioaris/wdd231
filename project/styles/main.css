@@ -440,7 +440,7 @@ main {
 }
 
 .form-container {
-    padding: 10px;
+    padding: 20px;
 }
 
 .form-container form {
@@ -449,6 +449,26 @@ main {
     margin-top: 20px;
     padding: 10px;
     border-radius: 15px;
+}
+
+.css-button-fully-rounded--grey {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #495057;
+    background: #495057;
+}
+.css-button-fully-rounded--grey:hover {
+    background: #fff;
+    color: #495057;
 }
 
 .box-contact-action {
