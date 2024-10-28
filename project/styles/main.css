@@ -659,10 +659,10 @@ main {
 /* Para centrar el h4 en la parte inferior de cada imagen */
 .slider-dimensions h4 {
     position: absolute;
-    bottom: 10px; /* Ajusta según la distancia deseada desde el fondo */
+    bottom: 10px; 
     left: 50%;
     transform: translateX(-50%);
-    color: white; /* Asegúrate de que el texto sea legible */
+    color: white; 
     font-size: 1.2em;
     text-align: center;
     background: rgba(
@@ -670,7 +670,7 @@ main {
         0,
         0,
         0.5
-    ); /* Fondo semitransparente para mejor contraste */
+    ); 
     padding: 5px 10px;
     border-radius: 5px;
 }
