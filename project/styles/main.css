@@ -59,7 +59,7 @@ h2,
 h3,
 h4,
 h5,
-a {
+a, label {
     font-family: var(--header-font-family);
     font-size: var(--font-size-mv-header);
 }
@@ -187,6 +187,15 @@ main {
     margin: 0 auto;
 }
 
+.action-msg,
+.action-box img,
+.social-box,
+.side_article,
+.intro-content,
+.intro-img img {
+    border-radius: 15px;
+}
+
 .intro-content {
     grid-row: 2;
     grid-column: 2;
@@ -297,6 +306,7 @@ main {
 .contact-item h4 {
     margin: 0;
     font-weight: bold;
+
 }
 
 .contact-item p {
@@ -342,6 +352,9 @@ main {
     grid-row: 2/3;
     grid-column: 2/3;
     text-align: center;
+    background-color: #343a4085;
+    width: 350px;
+    padding: 10px;
 }
 
 .action-msg h2,
@@ -352,7 +365,13 @@ main {
 }
 
 .action-msg h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.action-msg h4 {
+    font-size: 1.5rem;
+    color: var(--white);
 }
 
 .socia-info {
@@ -410,7 +429,6 @@ main {
     transform: scale(1) rotateY(0deg);
 }
 
-
 .contact-box {
     display: flex;
     flex-direction: column;
@@ -420,9 +438,15 @@ main {
 
 .form-container {
     padding: 10px;
+    
+}
+
+.form-container form {
     background-color: hsla(165, 19%, 40%, 0.5);
     margin: 0 auto;
     margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .box-contact-action {
@@ -475,6 +499,279 @@ main {
     color: var(--white);
 }
 
+/* Visit */
+
+/* Sección Principal */
+.section-principal {
+    padding: 20px;
+    text-align: center;
+    color: var(--eerie-black);
+}
+
+.section-principal h2 {
+    color: var(--caribbean-current);
+    margin-bottom: 15px;
+}
+
+.section-principal h2 span {
+    color: var(--orange-wheel);
+}
+
+/* Caja de Precios */
+.price-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.price-box div {
+    background-color: var(--mint-cream);
+    border: 1px solid var(--ash-gray);
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(100% / 3 - 20px);
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.price-box div:hover {
+    transform: translateY(-10px);
+}
+
+.price-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.price-box h4 {
+    color: var(--caribbean-current);
+    margin: 10px 0 5px;
+}
+
+.price-box h5 {
+    color: var(--fire-engine-red);
+    margin: 0 0 15px;
+}
+
+.price-box p {
+    text-align: center;
+    color: var(--dark-slate-gray);
+    margin-bottom: 20px;
+}
+
+/* Botón de Reservar */
+.price-box button {
+    background-color: var(--prussian-blue);
+    color: var(--font-color-on-background-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.price-box button:hover {
+    background-color: var(--orange-wheel);
+    color: var(--font-color-on-background-color);
+}
+
+/* ----------  */
+
+/* Sección de Ofertas */
+.section-media {
+    padding: 20px;
+    text-align: center;
+    color: var(--eerie-black);
+    background-color: var(--eerie-black);
+}
+
+.section-media h2 {
+    color: var(--caribbean-current);
+    margin-bottom: 15px;
+}
+
+.section-media p {
+    text-align: justify;
+    color: var(--white);
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-dimensions {
+    width: min(100vw, 720px);
+    aspect-ratio: 3 / 2;
+    position: relative;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--eerie-black);
+    margin: 0 auto;
+}
+
+.slider {
+    position: absolute;
+    display: flex;
+    transform: translateX(-0%);
+    transition: transform 1s;
+}
+
+.slider > div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+/* Para centrar el h4 en la parte inferior de cada imagen */
+.slider-dimensions h4 {
+    position: absolute;
+    bottom: 10px; /* Ajusta según la distancia deseada desde el fondo */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Asegúrate de que el texto sea legible */
+    font-size: 1.2em;
+    text-align: center;
+    background: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Fondo semitransparente para mejor contraste */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-container {
+    position: absolute;
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.nav-container:hover {
+    opacity: 1;
+}
+
+.index-container {
+    align-self: flex-end;
+    display: flex;
+    gap: 30px;
+}
+
+.index-container > button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.index-container > button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+button[data-index-change] {
+    font-size: 40px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Section opinion*/
+
+/* Sección de Opiniones */
+.section-opinion {
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--font-color-on-background-color);
+    display: grid;
+    gap: 20px;
+}
+
+/* Encabezado */
+.section-opinion h2 {
+    color: var(--black);
+    margin-bottom: 40px;
+}
+
+/* Estilos para cada Opinión */
+.opinion {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--eerie-black);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.opinion p {
+    margin-bottom: 10px;
+}
+
+.opinion h5 {
+    color: var(--caribbean-current);
+    margin-top: 10px;
+    text-align: right;
+}
+
+.contact-info-visit {
+    background-color: var(--eerie-black);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.contact-info-visit a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.contact-info-visit a:hover {
+    background-color: var(--caribbean-current);
+    transform: scale(1.1); 
+}
+
+
+.contact-info-visit img {
+    width: 24px;
+    height: 24px;
+    filter: invert(
+        1
+    ); 
+    transition: filter 0.3s;
+}
+
+.contact-info-visit a:hover img {
+    filter: invert(0); 
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -512,7 +809,8 @@ footer .icon:hover {
     h3,
     h4,
     h5,
-    a {
+    a,
+    label  {
         font-family: var(--header-font-family);
         font-size: var(--font-size-dv-header);
     }
@@ -666,5 +964,30 @@ footer .icon:hover {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1f 1fr;
+    }
+
+    .nav-container {
+        padding: 0 0 10px;
+    }
+
+    .index-container {
+        gap: 20px;
+    }
+    .section-opinion {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Opiniones en línea usando Flexbox */
+    .section-opinion h2 {
+        margin-bottom: 30px;
+    }
+
+    .opinion {
+        flex: 1;
+        max-width: 300px;
+        margin: 0 10px;
+        height: 300px;
     }
 }

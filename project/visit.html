@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="styles/main.css">
 
     <script type="module" src="scripts/app.mjs"></script>
+    <script src="scripts/module/visit.js" defer></script>
 
 </head>
 
@@ -48,7 +49,7 @@
     </header>
 
     <main>
-        <section>
+        <section class="section-principal">
             <h2>Nature <span>Adventure</span></h2>
             <article class="price-box">
                 <div>
@@ -75,50 +76,59 @@
 
             </article>
         </section>
-        <section>
-            <h2>What We Can Offer You</h2>
-            <p></p>
 
-            <article>
-                <div class="box-offer">
-                    <img src="images/offer-01-small.png" alt="">
-                    <h4>Bespoke Tour Packages</h4>
+        <section class="section-media">
+            <h2>What We Can Offer You</h2>
+            <p>Panama Experience offers curated travel packages, local expertise, and unforgettable adventures that
+                highlight the beauty, culture, and diversity of Panama. Whether you're seeking relaxation, adventure, or
+                cultural immersion, our services are designed to make your visit exceptional.</p>
+            <article class="slider-container slider-dimensions">
+                <div class="slider">
+                    <div data-img-url="images/offer-01-small.png" class="slider-dimensions">
+                        <h4>Bespoke Tour Packages</h4>
+                    </div>
+                    <div data-img-url="images/offer-02-small.png" class="slider-dimensions">
+                        <h4>Certified Activity Guides</h4>
+                    </div>
+                    <div data-img-url="images/offer-03-small.png" class="slider-dimensions">
+                        <h4>A la Carte Activities</h4>
+                    </div>
+                    <div data-img-url="images/offer-04-small.png" class="slider-dimensions">
+                        <h4>Transport & Airport Transfers</h4>
+                    </div>
                 </div>
-                <div class="box-offer">
-                    <img src="images/offer-02-small.png" alt="">
-                    <h4>Certified Activity Guides</h4>
-                </div>
-                <div class="box-offer">
-                    <img src="images/offer-03-small.png" alt="">
-                    <h4>A la Carte Activities</h4>
-                </div>
-                <div class="box-offer">
-                    <img src="images/offer-04-small.png" alt="">
-                    <h4>Transport & Airport Transfers</h4>
+                <div class="nav-container slider-dimensions">
+                    <button data-index-change="-1">&lt;</button>
+                    <div class="index-container">
+                    </div>
+                    <button data-index-change="1">&gt;</button>
                 </div>
             </article>
         </section>
-        <section>
+
+        <section class="section-opinion">
             <h2>What Our Clients Say</h2>
-            <img src="images/background-client-section.png" alt="background client section">
-            <article>
-                <div class="opinion">
-                    <p>"The self-paced tour was perfect for us! We loved the flexibility and the recommendations were
-                        spot-on. Highly recommended!"</p>
-                    <h5>Miguel Rivera</h5>
-                </div>
-                <div class="opinion">
-                    <p>"Having a semi-guided tour was the ideal balance. We got to explore on our own but also enjoyed
-                        the insights from our local guide."</p>
-                    <h5>Larissa Charter</h5>
-                </div>
-                <div class="opinion">
-                    <p>"The fully guided tour was fantastic! Our guide was knowledgeable and friendly, making the
-                        experience truly memorable."</p>
-                    <h5>Carey Larson</h5>
-                </div>
-            </article>
+            <div class="opinion opinion-01">
+                <p>"The self-paced tour was perfect for us! We loved the flexibility and the recommendations were
+                    spot-on. Highly recommended!"</p>
+                <h5>Miguel Rivera</h5>
+            </div>
+            <div class="opinion opinion-02">
+                <p>"Having a semi-guided tour was the ideal balance. We got to explore on our own but also enjoyed
+                    the insights from our local guide."</p>
+                <h5>Larissa Charter</h5>
+            </div>
+            <div class="opinion opinion-03">
+                <p>"The fully guided tour was fantastic! Our guide was knowledgeable and friendly, making the
+                    experience truly memorable."</p>
+                <h5>Carey Larson</h5>
+            </div>
         </section>
+        <div class="contact-info-visit">
+            <a href="#"><img src="images/logos/Facebook_Logo_Secondary.png" alt="Facebook"></a>
+            <a href="#"><img src="images/logos/logo-x-version-white.png" alt="Twitter"></a>
+            <a href="#"><img src="images/logos/Instagram_Glyph_White.png" alt="Instagram"></a>
+        </div>
 
     </main>
     <footer>
