@@ -59,7 +59,8 @@ h2,
 h3,
 h4,
 h5,
-a, label {
+a,
+label {
     font-family: var(--header-font-family);
     font-size: var(--font-size-mv-header);
 }
@@ -79,7 +80,6 @@ button {
 header,
 footer {
     width: 100%;
-
     background-color: var(--background-color-header-footer);
     color: var(--charcoal);
 }
@@ -95,7 +95,8 @@ footer {
 }
 
 .logo-chamber {
-    width: 70px;
+    width: 80px;
+    height: 80px;
     padding: 10px 5px;
     cursor: pointer;
 }
@@ -293,6 +294,7 @@ main {
     width: 90%;
     max-width: 520px;
     border-radius: 10px;
+    height: auto;
 }
 
 .contact-info {
@@ -306,7 +308,6 @@ main {
 .contact-item h4 {
     margin: 0;
     font-weight: bold;
-
 }
 
 .contact-item p {
@@ -327,6 +328,7 @@ main {
     width: 30px;
     margin: 0 2px;
     vertical-align: middle;
+    height: auto;
 }
 
 .social-box {
@@ -401,6 +403,7 @@ main {
 
 .current-weather img {
     width: 70px;
+    height: auto;
 }
 
 .current-weather figure,
@@ -417,6 +420,7 @@ main {
     display: block;
     opacity: 0;
     transition: opacity 0.8s ease, transform 0.8s ease;
+    height: auto;
 }
 
 .image-side img.initial {
@@ -437,7 +441,6 @@ main {
 
 .form-container {
     padding: 10px;
-    
 }
 
 .form-container form {
@@ -464,6 +467,7 @@ main {
 
 .image-container img {
     width: 100%;
+    height: auto;
 }
 
 .image-container {
@@ -488,6 +492,7 @@ main {
 .contact-item-social img {
     padding: 0;
     width: 20px;
+    height: auto;
 }
 
 .final-contact h3,
@@ -754,21 +759,18 @@ button[data-index-change] {
 
 .contact-info-visit a:hover {
     background-color: var(--caribbean-current);
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
-
 
 .contact-info-visit img {
     width: 24px;
     height: 24px;
-    filter: invert(
-        1
-    ); 
+    filter: invert(1);
     transition: filter 0.3s;
 }
 
 .contact-info-visit a:hover img {
-    filter: invert(0); 
+    filter: invert(0);
 }
 
 /* Footer */
@@ -809,7 +811,7 @@ footer .icon:hover {
     h4,
     h5,
     a,
-    label  {
+    label {
         font-family: var(--header-font-family);
         font-size: var(--font-size-dv-header);
     }
@@ -833,7 +835,8 @@ footer .icon:hover {
     }
 
     .logo-chamber {
-        width: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     header h1 {

@@ -22,7 +22,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Code+Pro&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -36,7 +38,8 @@
     <header>
         <nav>
             <div class="box-logo-header">
-                <img class="logo-chamber" src="images/favicon/favicon-circle-200x200.png" alt="Logo Chamber Panama" />
+                <img class="logo-chamber" src="images/favicon/favicon-circle-200x200.png" alt="Logo Chamber Panama"
+                    width="200" height="200" loading="lazy" />
                 <h1 class="nameHeader"><strong>Panamá</strong> <br>Experience</h1>
                 <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
             </div>
@@ -53,21 +56,21 @@
             <h2>Nature <span>Adventure</span></h2>
             <article class="price-box">
                 <div>
-                    <img src="images/price-img-01-small.png" alt="">
+                    <img src="images/price-img-01-small.png" alt="Panama" width="540" height="960" loading="lazy">
                     <h4>Self-Paced Tour</h4>
                     <h5>$399</h5>
                     <p>Explore at your own pace with a customizable itinerary. Perfect for independent travelers.</p>
                     <button>Book Now</button>
                 </div>
                 <div>
-                    <img src="images/price-img-02-small.png" alt="">
+                    <img src="images/price-img-02-small.png" alt="Panama" width="540" height="960" loading="lazy">
                     <h4>Semi-Guided Tour</h4>
                     <h5>$499</h5>
                     <p>A mix of guided and self-paced experiences. Includes support from local experts.</p>
                     <button>Book Now</button>
                 </div>
                 <div>
-                    <img src="images/price-img-03-small.png" alt="">
+                    <img src="images/price-img-03-small.png" alt="Panama" width="540" height="960" loading="lazy">
                     <h4>Fully Guided Tour</h4>
                     <h5>$599</h5>
                     <p>Enjoy a fully guided experience with a personal guide. Ideal for immersive travel.</p>
@@ -84,16 +87,16 @@
                 cultural immersion, our services are designed to make your visit exceptional.</p>
             <article class="slider-container slider-dimensions">
                 <div class="slider">
-                    <div data-img-url="images/offer-01-small.png" class="slider-dimensions">
+                    <div data-img-url="images/offer-01-small.png" class="slider-dimensions" width="470" loading="lazy">
                         <h4>Bespoke Tour Packages</h4>
                     </div>
-                    <div data-img-url="images/offer-02-small.png" class="slider-dimensions">
+                    <div data-img-url="images/offer-02-small.png" class="slider-dimensions" width="470" loading="lazy">
                         <h4>Certified Activity Guides</h4>
                     </div>
-                    <div data-img-url="images/offer-03-small.png" class="slider-dimensions">
+                    <div data-img-url="images/offer-03-small.png" class="slider-dimensions" width="470" loading="lazy">
                         <h4>A la Carte Activities</h4>
                     </div>
-                    <div data-img-url="images/offer-04-small.png" class="slider-dimensions">
+                    <div data-img-url="images/offer-04-small.png" class="slider-dimensions" width="470" loading="lazy">
                         <h4>Transport & Airport Transfers</h4>
                     </div>
                 </div>
@@ -125,9 +128,12 @@
             </div>
         </section>
         <div class="contact-info-visit">
-            <a href="#"><img src="images/logos/Facebook_Logo_Secondary.png" alt="Facebook"></a>
-            <a href="#"><img src="images/logos/logo-x-version-white.png" alt="Twitter"></a>
-            <a href="#"><img src="images/logos/Instagram_Glyph_White.png" alt="Instagram"></a>
+            <a href="#"><img src="images/logos/Facebook_Logo_Secondary.png" alt="Facebook" width="104" height="104"
+                    loading="lazy" loading="lazy"></a>
+            <a href="#"><img src="images/logos/logo-x-version-white.png" alt="Twitter" width="104" height="104"
+                    loading="lazy" loading="lazy"></a>
+            <a href="#"><img src="images/logos/Instagram_Glyph_White.png" alt="Instagram" width="104" height="104"
+                    loading="lazy" loading="lazy"></a>
         </div>
 
     </main>
